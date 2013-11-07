@@ -1,4 +1,4 @@
-EE103: Intro to VLSI Design [Project Title]
+EE103: Intro to VLSI Design
 ===========================
 Final Project
 -------------
