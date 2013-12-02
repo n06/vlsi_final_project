@@ -1,0 +1,4 @@
+# File Created by Nicholas S. Davis at Mon Dec  2 13:16:49 2013
+# assisted by CdsLibEditor
+INCLUDE /usr/cots/cadence/6.x/local/ncsu-cdk/cdssetup/cds.lib
+DEFINE Adder Adder

@@ -1,0 +1,31 @@
+\o Program:		@(#)$CDS: cdsLibEditor.exe version 6.1.2 04/01/2009 13:46 (cat71lnx) $
+\o Sub version:		sub-version 07.02-s041
+\o Arguments:		-cdslib /h/ndavis01/final_project/vlsi_final_project/cds.lib -mpssession virtuoso3043 -mpshost lab120j 
+\o Working Directory:	lab120j:/h/ndavis01/final_project/vlsi_final_project
+\a nrSetWindowVisibility(cdsLibEditor "show")
+\o Qt version: 		4.2.3
+\a nrSetCurrentWindow(cdsLibEditor)
+\a nrResizeWindow(cdsLibEditor list(0 49 500 400))
+\a nrListItemAction(cdsLibEditor->mainTable 11 0)
+\o Active cell: 11 0 ""
+\a cdsLibEditor->editAddLibButton->value = t
+\a newLibraryDialog->filePathComboBox->value = "/h/ndavis01/final_project/vlsi_final_project"
+\a newLibraryDialog->useMappedName->value = nil
+\a nrSetWindowVisibility(newLibraryDialog "show")
+\a nrSetCurrentWindow(newLibraryDialog)
+\a nrResizeWindow(newLibraryDialog list(0 36 531 513))
+\a newLibraryDialog->libraryListBox->value = "Adder"
+\a newLibraryDialog->useMappedName->value = t
+\a newLibraryDialog->libraryName->value = "Adder"
+\a newLibraryDialog->okButton->value = t
+\a nrListItemRename(cdsLibEditor->mainTable 11 0 "Adder")
+\a newLibraryDialog->libraryListBox->value = nil
+\a newLibraryDialog->useMappedName->value = nil
+\a newLibraryDialog->libraryName->value = ""
+\a nrListItemAction(cdsLibEditor->mainTable 12 0)
+\o Active cell: 12 0 ""
+\a nrSetCurrentWindow(cdsLibEditor)
+\a cdsLibEditor->fileSaveButton->value = t
+\a cdsLibEditor->fileExitButton->value = t
+\a nrSetWindowVisibility(cdsLibEditor "hide")
+\a exit(0)
