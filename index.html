@@ -1,29 +1,183 @@
 <!DOCTYPE html5>
+
 <html>
 <head>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" href="assets/css/bootstrap.min.css" />
-<link rel="stylesheet" href="assets/css/custom.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css" type="text/css">
+    <link rel="stylesheet" href="assets/css/custom.css" type="text/css">
+
+    <title>EE103 Final Project</title>
 </head>
+
 <body class="background">
-<title>EE103 Final Project</title>
-<nav class="navbar navbar-default" role="navigation" style="text-align:center">
-  <div class="navbar-header">
-    <button type="button" class="navbar-toggle" data-toggle="collapse"
-      data-target="#something">
-  <h1 class="title"> EE103: Introduction to VLSI Design </h1>
-  <h2 class="title"> Final Project: Streamlined 8-bit Adder </br> <small> by Nicholas Davis and Noah Kurinsky
-  </small> </h2>
-  </div>
-</nav>
-<article style="text-align:center">
-</br>
-<h2 style="text-align:center" >Abstract</h2>
-<p style="align:center">We propose to develop an 8-bit CMOS adder with look ahead carry, with the design goals of maximizing performance through careful stage sizing while minimizing chip area and sources of leakage current. We will additionally add subtraction capabilities if possible through s complement subtraction, and propose to optimize performance through careful design of crucial bottlenecks and smart carry treatment. </p><br/>
+    <nav class="navbar navbar-default" role="navigation">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle"
+              data-toggle="collapse"
+            data-target="#bs-example-navbar-collapse-1"><span
+          class="sr-only">Toggle navigation</span></button> <a
+      class="navbar-brand" href="#">EE103 Final Project</a>
+        </div><!-- Collect the nav links, forms, and other content for toggling -->
 
-<a href="http://www.eecs.tufts.edu/~nkurin0a/EE103/Noah_Lab3.pdf"> Lab 3</a><br/>
-<a href="http://www.eecs.tufts.edu/~nkurin0a/EE103/Adder_Initial_Design.pdf"> Initial Adder Design and Simulation </a><br/>
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+              <li class="dropdown">
+                <a href="#" class="dropdown-toggle"
+                  data-toggle="dropdown">Sections <b class="caret"></b></a>
+                <ul class="dropdown-menu">
+                <li><a href="#">Action</a></li>
+                <li><a href="#">Another action</a></li>
+                <li><a href="#">Something else here</a></li>
+                <li><a href="#">Separated link</a></li>
+                <li><a href="#">One more separated link</a></li>
+                </ul>
+              </li>
+            </ul>
+        </div><!-- /.navbar-collapse -->
+    </nav>
 
-</article>
+    <h1 class="title">EE103: Introduction to VLSI Design</h1>
+
+    <h2 class="title">Final Project: Streamlined 8-bit Adder<br>
+    <small>by Nicholas Davis and Noah Kurinsky</small></h2>
+        <br>
+        <div class="container">
+        <h2>Abstract</h2>
+
+        <p>We propose to develop an 8-bit CMOS adder with look ahead
+        carry, with the design goals of maximizing performance through careful stage
+        sizing while minimizing chip area and sources of leakage current. We will additionally 
+        add subtraction capabilities if possible through 1's complement subtraction, and 
+        propose to optimize performance through careful design of crucial bottlenecks and smart 
+        carry treatment.</p><br>
+        <h2>Introduction</h2>
+        <p>
+        For our final project, we have chosen to create an 8-bit adder/subtractor. For our 
+        first iteration we have implemented this with carry lookahead logic, which will keep 
+        the time delay for the adder down by computing the carry out bit of each stage in 
+        parallel. In order to test our initial implementation we have broken down the adder 
+        into modular components. The 1's complimenter component takes in a control signal, 
+        and 8 bits of input. When the control signal is high, the 8 inputs are inverted, and 
+        when the control signal is low, they are left alone. For our design, we do not 
+        actually want to 1's compliment the second 8-bit number, but instead we want to have 
+        a 2's compliment system. The reason we broke out the 1's compliment logic into a 
+        separate module is because with our full adder implementation, as long as the control 
+        signal is the same as the carry-in for the first full adder, the second 8-bit number 
+        will in effect, 2's compliment (1's compliment + 1). As mentioned, the second module 
+        is a 1-bit full adder. This adder takes in 2 input bits, 1 carry-in bit and outputs 
+        a sum bit, a propagation bit and a generation bit. The last module in our design is 
+        the carry lookahead unit. This unit takes in 4 sets of propagation and generation bits 
+        (8 bits total) as well as the first carry-out bit in the system. The carry lookahead unit
+        outputs 4 carry-out bits.</p>
+        <p>The carry look ahead logic 
+        (implemented as a Carry Look-ahead Unit, or CLU) entails removing the carry function from
+        the full adder, and computing carry bits in parallel to decrease the number of gates from 
+        input to output in the higher bits. The logic for this lookahead carry is simple for the 
+        carry of the first bit:
+        </p><br>
+        <p>
+        and has the same for for all subsequent bits; using these equations, an equation for each
+        carry can be generated in terms of only propagation, generation and the first carry input; 
+        this means each carry is no longer dependent on the previous carry and they can be computed 
+        quickly in parallel. The equations for a 4--bit CLU are seen below:
+        </p><br>
+        <p>
+        Here it is easy to see how larger bit implementations become
+        excessively large.
+        </p><br>
+        <p>
+        The final architecture represents a combination of carry-look ahead and ripple carry logic, 
+        to balance the speed gained from the look-ahead logic with the complexity, area, and delay 
+        inherent to 8-bit CLUs. We construct a 4-bit CLU, and use two rippled CLUs to compute 8-bit
+        carry look-ahead logic with one ripple step. This is not necessarily as fast as a single 8-bit 
+        unit, but is more efficient in terms of area and power. In the following section we detail the
+        development process, and in the subsequent section we discuss our results. Finally, we briefly 
+        discuss the direction we will take in our final project.
+        </p><br>
+        <h2>Procedure</h2>
+        <p>
+        To design the adder, we first constructed the basic functional modules out of the primitive gates
+        designed in Part I of Lab 3. For each module, we constructed a schematic, verified it, and created
+        a symbol view. Then , simulate the 1's compliment module, and the full adder module separately to
+        make sure that they function correctly. Once all of the symbols have been completed and the schematics
+        have been verified and simulated, take the symbols, and construct a schematic for the full 8-bit 2's
+        compliment adder. Once the full schematic is complete, verify it, and simulate it using Verilog XL.
+        When simulating the full schematic, use the appropriate values in the stimulus file as given in the lab.
+        </p>
+        <h3>1's Compliment Module Analysis</h3>
+        <p>
+        Our 1's compliment implementation is very simple. Each input bit is XORed with the control bit.
+        Therefore, when the control is 1, all the bits will flip, and when the control is 0 the will stay
+        the same. In the lab, it is specified that we create a separate module for 2's compliment, and not
+        for 1's compliment, but in our design, the 2's compliment functionality is built into the overall
+        design, and cannot be separated out. In our design, in order to complete the 2's compliment logic,
+        the control signal for the 1's compliment module is tied to the carry-in of the least significant
+        adder in the design. This completes the 2's compliment algorithm, which is essentially, to flip all
+        of the bits in the second number, and add 1. Because we cannot separate the 2's compliment logic,
+        we test our 1's compliment logic separately to show that it will work as expected. In order to test
+        this module, we must simulate it using Verilog XL, and give the input signals a few different
+        operating conditions (different input patterns). Because we know what the module is supposed to output
+        given a set input, we can determine that the module has been implemented correctly by covering all
+        possible edge cases, as well as a base case. In figure 1, you can see the output wave form of our
+        simulation. As you can see, the module behaves as expected, and therefore we can move on to the next
+        module.
+        </p>
+        <h3>Full Adder Module Analysis</h3>
+        <p>
+        A traditional full adder takes in 3 bits (input A, input B, and carry-in) and outputs 2 bits 
+        (sum, and carry-out). Because we are implementing our adder using carry lookahead logic, however,
+        we must change the output of our full adder appropriately. Our full adder takes in 3 bits 
+        (input A, input B, and carry-in), but it outputs 3 bits. These 3 bits are the sum, propagation bit,
+        and generation bit. These two bits are determined by the following boolean algebra:
+        </p><br>
+        <p>
+        The propagation and generation bits will be used later as inputs to the carry lookahead unit module.
+        This module must be tested in the same way as the 1’s compliment module, however, because it is only
+        a 1-bit module, the test cases are much more limited. We will be using 8 of these modules in total,
+        but as long as we can verify the design of the single 1 bit adder, we know that all of them will work.
+        In figure 2, you can see the output waveform of the Verilog XL simulation. As you can see, the module
+        behaves as expected, and therefore we can move on to the carry lookahead unit.
+        </p>
+        <h3>Carry Lookahead Unit Analysis</h3>
+        <p>
+        This module will compute 4 carry bits in parallel, which will significantly speed up our adder
+        from the traditional ripple-carry implementation. These carry bits are generated in parallel by
+        using the propagation and generation bits from each adder. Because of the algorithms for each
+        carry bit, the hardware complexity is greater than that of a ripple-carry adder. This module is
+        not simulated separately from the main adder since we have simulated the other 2 modules.
+        Therefore, when we simulate the adder in its entirety, if there is a failure in the simulation,
+        it must be in the carry lookahead unit. We implemented the carry lookahead unit using only NAND
+        gates and inverters. This means that the hardware complexity of the unit will be larger than if we
+        used AND/OR/inverter logic, but it will be easier to optimize on the transistor level, and can still 
+        possibly be smaller in size.
+        </p>
+        <h3>8-bit 2's Compliment Adder Analysis</h3>
+        <p>
+        The final product after connecting all of our modules is a 8-bit 2's compliment carry lookahead adder.
+        This adder is made up of a single 1's compliment module, 8 full adders, and 2 4-bit carry lookahead
+        units. In order to verify that this adder works as expected, we implement 4 specific input cases
+        given by the lab in order to verify that the module works. These conditions are given as
+        </p><br>
+        <p>
+        We input the different cases into our stimulus file for this simulation, and run it using VERILOG XL.
+        As shown in figure 4 the output of our adder was correct for every case. It successfully performed 
+        addition and subtraction, and even was able to return 2's complemented sums (negative numbers). 
+        </p><br>
+        <h2>Conclusion</h2>
+        <p>
+        In this lab, we learned how to unit test our products using verilog simulations and cadence schematics.
+        We created an end-to-end product, acceptance tested its functionality, and learned about the hardware
+        development process. The combination of unit testing and acceptance testing is critical to understand
+        in industry, and will help us have a faster and more accurate development cycle for the final project.
+        As shown in our analysis, this lab was a success. Every module worked as expected, as did the final
+        adder.
+        </p>
+        <a href="http://www.eecs.tufts.edu/~nkurin0a/EE103/Noah_Lab3.pdf">Lab 3</a><br>
+        <a href="http://www.eecs.tufts.edu/~nkurin0a/EE103/Adder_Initial_Design.pdf">Initial Adder Design and Simulation</a><br>
+        </div>
+        <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+        <script src="https://code.jquery.com/jquery.js"></script>
+        <!-- Include all compiled plugins (below), or include individual files as needed -->
+        <script src="assets/js/bootstrap.min.js"></script>
 </body>
 </html>
