@@ -1,0 +1,90 @@
+@(#)$CDS: LVS version 6.1.3 07/09/2009 04:30 (cic612lnx) $
+
+Command line: /usr/cots/cadence/6.x/IC613/tools.lnx86/dfII/bin/32bit/LVS -dir /h/ndavis01/final_project/vlsi_final_project/LVS -l -s -t /h/ndavis01/final_project/vlsi_final_project/LVS/layout /h/ndavis01/final_project/vlsi_final_project/LVS/schematic
+Like matching is enabled.
+Net swapping is enabled.
+Using terminal names as correspondence points.
+Compiling Diva LVS rules...
+
+    Net-list summary for /h/ndavis01/final_project/vlsi_final_project/LVS/layout/netlist
+       count
+	12		nets
+	3		terminals
+	11		pmos
+	7		nmos
+
+    Net-list summary for /h/ndavis01/final_project/vlsi_final_project/LVS/schematic/netlist
+       count
+	12		nets
+	5		terminals
+	7		pmos
+	7		nmos
+
+
+    Terminal correspondence points
+    N11       N10       Clk
+    N10       N9        D
+    N9        N12       Q
+
+Devices in the netlist but not in the rules:
+        pcapacitor
+Devices in the rules but not in the netlist:
+        cap nfet pfet nmos4 pmos4
+
+The net-lists match.
+
+			     layout  schematic
+				instances
+	un-matched		0	0
+	rewired			0	0
+	size errors		0	0
+	pruned			0	0
+	active			18	14
+	total			18	14
+
+				  nets
+	un-matched		0	0
+	merged			0	0
+	pruned			0	0
+	active			12	12
+	total			12	12
+
+				terminals
+	un-matched		0	0
+	matched but
+	different type		0	0
+	total			3	5
+
+
+Probe files from /h/ndavis01/final_project/vlsi_final_project/LVS/schematic
+
+devbad.out:
+
+netbad.out:
+
+mergenet.out:
+
+termbad.out:
+
+prunenet.out:
+
+prunedev.out:
+
+audit.out:
+
+
+Probe files from /h/ndavis01/final_project/vlsi_final_project/LVS/layout
+
+devbad.out:
+
+netbad.out:
+
+mergenet.out:
+
+termbad.out:
+
+prunenet.out:
+
+prunedev.out:
+
+audit.out:
