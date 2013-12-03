@@ -1,3 +1,9 @@
 DEBUG SkillExprHandler ... trace listening on
+value=
+val_type=shmem_wave
+data_type=double
+value_id=15859730
+semaphore_id=3047428
+eval_id=
 
 Visualization & Analysis Tool exited gracefully

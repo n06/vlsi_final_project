@@ -1,48 +1,56 @@
 @(#)$CDS: LVS version 6.1.3 07/09/2009 04:30 (cic612lnx) $
 
-Command line: /usr/cots/cadence/6.x/IC613/tools.lnx86/dfII/bin/32bit/LVS -dir /h/ndavis01/final_project/vlsi_final_project/LVS -l -s -t /h/ndavis01/final_project/vlsi_final_project/LVS/layout /h/ndavis01/final_project/vlsi_final_project/LVS/schematic
+Command line: /usr/cots/cadence/6.x/IC613/tools.lnx86/dfII/bin/32bit/LVS -dir /h/nkurin0a/public_html/EE103/LVS -l -s -t /h/nkurin0a/public_html/EE103/LVS/layout /h/nkurin0a/public_html/EE103/LVS/schematic
 Like matching is enabled.
 Net swapping is enabled.
 Using terminal names as correspondence points.
 Compiling Diva LVS rules...
 
-    Net-list summary for /h/ndavis01/final_project/vlsi_final_project/LVS/layout/netlist
+    Net-list summary for /h/nkurin0a/public_html/EE103/LVS/layout/netlist
        count
-	86		nets
-	21		terminals
-	101		pmos
-	65		nmos
+	429		nets
+	29		terminals
+	517		pmos
+	581		nmos
 
-    Net-list summary for /h/ndavis01/final_project/vlsi_final_project/LVS/schematic/netlist
+    Net-list summary for /h/nkurin0a/public_html/EE103/LVS/schematic/netlist
        count
-	86		nets
-	21		terminals
-	65		pmos
-	65		nmos
+	429		nets
+	29		terminals
+	349		pmos
+	415		nmos
 
 
     Terminal correspondence points
-    N75       N14       Clk
-    N85       N19       D0
-    N84       N7        D1
-    N83       N16       D2
-    N82       N9        D3
-    N81       N5        D4
-    N80       N20       D5
-    N79       N21       D6
-    N78       N18       D7
-    N77       N15       D8
-    N74       N2        Q0
-    N73       N13       Q1
-    N72       N10       Q2
-    N71       N12       Q3
-    N70       N6        Q4
-    N69       N3        Q5
-    N68       N4        Q6
-    N67       N8        Q7
-    N66       N11       Q8
-    N65       N0        gnd!
-    N76       N1        vdd!
+    N410      N6        A0
+    N409      N19       A1
+    N408      N25       A2
+    N407      N35       A3
+    N406      N17       A4
+    N405      N4        A5
+    N404      N8        A6
+    N403      N44       A7
+    N426      N12       B0
+    N424      N18       B1
+    N422      N27       B2
+    N420      N36       B3
+    N419      N13       B4
+    N418      N9        B5
+    N417      N26       B6
+    N416      N2        B7
+    N412      N85       CLK
+    N415      N16       Cout
+    N402      N11       S0
+    N401      N24       S1
+    N400      N3        S2
+    N428      N7        S3
+    N427      N46       S4
+    N425      N15       S5
+    N423      N10       S6
+    N421      N5        S7
+    N414      N14       Sub
+    N411      N0        gnd!
+    N413      N1        vdd!
 
 Devices in the netlist but not in the rules:
         pcapacitor
@@ -57,24 +65,24 @@ The net-lists match.
 	rewired			0	0
 	size errors		0	0
 	pruned			0	0
-	active			166	130
-	total			166	130
+	active			1098	764
+	total			1098	764
 
 				  nets
 	un-matched		0	0
 	merged			0	0
 	pruned			0	0
-	active			86	86
-	total			86	86
+	active			429	429
+	total			429	429
 
 				terminals
 	un-matched		0	0
 	matched but
 	different type		0	0
-	total			21	21
+	total			29	29
 
 
-Probe files from /h/ndavis01/final_project/vlsi_final_project/LVS/schematic
+Probe files from /h/nkurin0a/public_html/EE103/LVS/schematic
 
 devbad.out:
 
@@ -91,7 +99,7 @@ prunedev.out:
 audit.out:
 
 
-Probe files from /h/ndavis01/final_project/vlsi_final_project/LVS/layout
+Probe files from /h/nkurin0a/public_html/EE103/LVS/layout
 
 devbad.out:
 

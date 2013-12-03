@@ -1,0 +1,22 @@
+//Verilog HDL for "Adder", "Latch" "functional"
+
+`timescale 1ns/10ps
+
+module Latch ( Q, Clk, D );
+
+  input D;
+  output Q;
+  input Clk;
+  wire Q_;
+  wire L,R,QR;
+  wire Clk_;
+
+  not #1 n0(Clk_,Clk);  
+  
+  not #1 n1(QR,Q_);
+  and #2 a0(L,D,Clk);
+  and #2 a1(R,QR,Clk_);
+  nor no0(Q_,R,L);
+  not #1 n2(Q,Q_);
+
+endmodule

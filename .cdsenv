@@ -1,6 +1,3 @@
-license	VLSL_UseNextLicense	string	"always"
-license	ADEL_UseNextLicense	string	"always"
-license	VSEL_UseNextLicense	string	"always"
 ;--------------------------------------------------------------------------
 ;
 ;This is a sample environment variable file containing the default
@@ -34,6 +31,8 @@ asimenv.startup       simulator       string  "hspiceD"
 asimenv.startup       projectDir      string  "~/cadence/simulation"
 asimenv.window        x       int     100
 asimenv.window        y       int     480
+asimenv.plotting      width   int     900
+asimenv.plotting      height  int     700
 asimenv.plotting      x       int     100
 asimenv.plotting      y       int     40
 

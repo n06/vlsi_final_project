@@ -1,0 +1,12 @@
+//Verilog HDL for "Lab3", "Inverter" "functional"
+
+
+module Inverter ( Vout, Vin );
+
+  'timescale 1ns/10ps
+  input Vin;
+  output Vout;
+
+  not #1 n1(Vout,Vin);	
+
+endmodule
