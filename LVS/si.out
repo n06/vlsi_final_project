@@ -9,7 +9,7 @@ Compiling Diva LVS rules...
     Net-list summary for /h/ndavis01/final_project/vlsi_final_project/LVS/layout/netlist
        count
 	12		nets
-	3		terminals
+	5		terminals
 	11		pmos
 	7		nmos
 
@@ -22,9 +22,11 @@ Compiling Diva LVS rules...
 
 
     Terminal correspondence points
-    N11       N10       Clk
-    N10       N9        D
-    N9        N12       Q
+    N10       N10       Clk
+    N9        N9        D
+    N8        N12       Q
+    N7        N0        gnd!
+    N11       N1        vdd!
 
 Devices in the netlist but not in the rules:
         pcapacitor
@@ -53,7 +55,7 @@ The net-lists match.
 	un-matched		0	0
 	matched but
 	different type		0	0
-	total			3	5
+	total			5	5
 
 
 Probe files from /h/ndavis01/final_project/vlsi_final_project/LVS/schematic

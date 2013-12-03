@@ -1013,7 +1013,9 @@ Loading ~/.simrc file.
 Loading ~/.simrc file.
 Loading ~/.simrc file.
 Loading ~/.simrc file.
+Loading ~/.simrc file.
 *Error* load: can't access file - "~/.simrc"
+Loading ~/.simrc file.
 Loading ~/.simrc file.
 Loading ~/.simrc file.
 Loading ~/.simrc file.
@@ -2076,7 +2078,7 @@ Running simulation in directory: "/h/ndavis01/final_project/vlsi_final_project/L
 
 
 
-Begin netlist:    Dec  2 17:46:41 2013
+Begin netlist:    Dec  2 18:58:30 2013
 	view name list	= ("auLvs" "extracted")
 	stop name list	= ("auLvs")
 	library name	= "Adder"
@@ -2085,7 +2087,7 @@ Begin netlist:    Dec  2 17:46:41 2013
 	globals lib	= "basic"
 Running Artist Flat Netlisting ...
 *WARNING* Parameter 'lxUseCell' already exists.
-End netlist:    Dec  2 17:46:42 2013
+End netlist:    Dec  2 18:58:31 2013
 
 Moving original netlist to extNetlist
 Removing parasitic components from netlist
@@ -2097,7 +2099,7 @@ Removing parasitic components from netlist
 	12 nodes merged into 12 nodes
 
 
-Begin netlist:    Dec  2 17:46:42 2013
+Begin netlist:    Dec  2 18:58:31 2013
 	view name list	= ("auLvs" "cmos_sch" "schematic" "symbol")
 	stop name list	= ("auLvs")
 	library name	= "Adder"
@@ -2106,7 +2108,7 @@ Begin netlist:    Dec  2 17:46:42 2013
 	globals lib	= "basic"
 Running Artist Flat Netlisting ...
 *WARNING* Parameter 'lxUseCell' already exists.
-End netlist:    Dec  2 17:46:42 2013
+End netlist:    Dec  2 18:58:31 2013
 
 Moving original netlist to extNetlist
 Removing parasitic components from netlist
@@ -2118,7 +2120,7 @@ Removing parasitic components from netlist
 	14 nodes merged into 14 nodes
 
 Running netlist comparison program:  LVS
-Begin comparison:    Dec  2 17:46:42 2013
+Begin comparison:    Dec  2 18:58:31 2013
 @(#)$CDS: LVS version 6.1.3 07/09/2009 04:30 (cic612lnx) $
 
 The net-lists match.
@@ -2143,8 +2145,8 @@ The net-lists match.
 	un-matched		0	0
 	matched but
 	different type		0	0
-	total			3	5
-End comparison:      Dec  2 17:46:42 2013
+	total			5	5
+End comparison:      Dec  2 18:58:31 2013
 
 
 Comparison program completed successfully.
