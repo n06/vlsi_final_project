@@ -45,8 +45,8 @@ si: simSetDef().... simSedFile is already set to
 "/usr/cots/cadence/6.x/IC613/tools.lnx86/dfII/etc/si/hiersed.spectre".
 Redefinition to "" is ignored.
 si: simSetDef().... simDefaultSimulator is initialized to "nil".
-si: simSetDef().... simDefaultRunDir is already set to "spice.run1".
-Redefinition to nil is ignored.
+si: simSetDef().... simDefaultRunDir is already set to "LVS". Redefinition to
+nil is ignored.
 si: simSetDef().... simSymbolModifiedAction is initialized to "ignore" .
 si: simSetDef().... simOtherInfo is initialized to "nil".
 si: simSetDef().... simIsFlattenP is initialized to "nil".
@@ -167,6 +167,87 @@ si: simSetDef().... simCleanFileList is initialized to ("layout/netbad.out"
 "schematic/prunedev.out" "schematic/prunenet.out" "schematic/audit.out"
 "schematic/ovfldev.out" "schematic/ovflnet.out" "lvs.cpoint" "si.out"
 "xref.out") .
+si: simSetDef().... lvsSchematicViewList is already set to ("auLvs" "cmos_sch"
+"schematic" "symbol"). Redefinition to ("auLvs" "schematic") is ignored.
+si: simSetDef().... lvsLayoutViewList is already set to ("auLvs" "extracted").
+Redefinition to ("auLvs" "extracted" "schematic") is ignored.
+si: simSetDef().... simInstViewListTable is initialized to "nil".
+si: simSetDef().... simInstStopListTable is initialized to "nil".
+si: simSetDef().... applyDeviceFixing is initialized to "nil".
+si: simSetDef().... lvsNetlistLayout is already set to t. Redefinition to nil is
+ignored.
+si: simSetDef().... lvsNetlistSchematic is already set to t. Redefinition to nil
+is ignored.
+si: simSetDef().... correspondenceFile is already set to
+"/h/ndavis01/final_project/vlsi_final_project/lvs_corr_file". Redefinition to
+nil is ignored.
+si: simSetDef().... createXref is initialized to "nil".
+si: simSetDef().... disableLikeMatch is initialized to "nil".
+si: simSetDef().... disableRewire is initialized to "nil".
+si: simSetDef().... useFileCorrespondence is initialized to "nil".
+si: simSetDef().... useLastBinaryXrefTable is initialized to "nil".
+si: simSetDef().... useTerminalCorrespondence is already set to t. Redefinition
+to nil is ignored.
+si: simSetDef().... lvsRulesFilePath is already set to "divaLVS.rul".
+Redefinition to "" is ignored.
+si: simSetDef().... lvsRulesLibName is already set to "NCSU_TechLib_ami06".
+Redefinition to "" is ignored.
+si: simSetDef().... lvsRulesFromLib is already set to t. Redefinition to nil is
+ignored.
+si: simSetDef().... lvsSchematicViewList is already set to ("auLvs" "cmos_sch"
+"schematic" "symbol"). Redefinition to ("auLvs" "schematic") is ignored.
+si: simSetDef().... lvsLayoutViewList is already set to ("auLvs" "extracted").
+Redefinition to ("auLvs" "extracted" "schematic") is ignored.
+si: simSetDef().... simInstViewListTable is initialized to "nil".
+si: simSetDef().... simInstStopListTable is initialized to "nil".
+si: simSetDef().... applyDeviceFixing is initialized to "nil".
+si: simSetDef().... lvsNetlistLayout is already set to t. Redefinition to nil is
+ignored.
+si: simSetDef().... lvsNetlistSchematic is already set to t. Redefinition to nil
+is ignored.
+si: simSetDef().... correspondenceFile is already set to
+"/h/ndavis01/final_project/vlsi_final_project/lvs_corr_file". Redefinition to
+nil is ignored.
+si: simSetDef().... createXref is initialized to "nil".
+si: simSetDef().... disableLikeMatch is initialized to "nil".
+si: simSetDef().... disableRewire is initialized to "nil".
+si: simSetDef().... useFileCorrespondence is initialized to "nil".
+si: simSetDef().... useLastBinaryXrefTable is initialized to "nil".
+si: simSetDef().... useTerminalCorrespondence is already set to t. Redefinition
+to nil is ignored.
+si: simSetDef().... lvsRulesFilePath is already set to "divaLVS.rul".
+Redefinition to "" is ignored.
+si: simSetDef().... lvsRulesLibName is already set to "NCSU_TechLib_ami06".
+Redefinition to "" is ignored.
+si: simSetDef().... lvsRulesFromLib is already set to t. Redefinition to nil is
+ignored.
+si: simSetDef().... lvsSchematicViewList is already set to ("auLvs" "cmos_sch"
+"schematic" "symbol"). Redefinition to ("auLvs" "schematic") is ignored.
+si: simSetDef().... lvsLayoutViewList is already set to ("auLvs" "extracted").
+Redefinition to ("auLvs" "extracted" "schematic") is ignored.
+si: simSetDef().... simInstViewListTable is initialized to "nil".
+si: simSetDef().... simInstStopListTable is initialized to "nil".
+si: simSetDef().... applyDeviceFixing is initialized to "nil".
+si: simSetDef().... lvsNetlistLayout is already set to t. Redefinition to nil is
+ignored.
+si: simSetDef().... lvsNetlistSchematic is already set to t. Redefinition to nil
+is ignored.
+si: simSetDef().... correspondenceFile is already set to
+"/h/ndavis01/final_project/vlsi_final_project/lvs_corr_file". Redefinition to
+nil is ignored.
+si: simSetDef().... createXref is initialized to "nil".
+si: simSetDef().... disableLikeMatch is initialized to "nil".
+si: simSetDef().... disableRewire is initialized to "nil".
+si: simSetDef().... useFileCorrespondence is initialized to "nil".
+si: simSetDef().... useLastBinaryXrefTable is initialized to "nil".
+si: simSetDef().... useTerminalCorrespondence is already set to t. Redefinition
+to nil is ignored.
+si: simSetDef().... lvsRulesFilePath is already set to "divaLVS.rul".
+Redefinition to "" is ignored.
+si: simSetDef().... lvsRulesLibName is already set to "NCSU_TechLib_ami06".
+Redefinition to "" is ignored.
+si: simSetDef().... lvsRulesFromLib is already set to t. Redefinition to nil is
+ignored.
 si: simSetDef().... lvsSchematicViewList is already set to ("auLvs" "cmos_sch"
 "schematic" "symbol"). Redefinition to ("auLvs" "schematic") is ignored.
 si: simSetDef().... lvsLayoutViewList is already set to ("auLvs" "extracted").
