@@ -12,5 +12,5 @@ ProcessCreationTime_Readable   Tue Dec  3 14:24:31 2013 EST
 AppIdentifier                  OA File System Design Manager
 OSType                         unix
 ReasonForPlacingEditLock       OpenAccess edit lock
-FilePathUsedToEditLock         /h/nkurin0a/public_html/EE103/Adder/Latch/layout/layout.oa.cdslck.dirlck
-TimeEditLocked                 Tue Dec  3 14:45:42 2013 EST
+FilePathUsedToEditLock         /h/nkurin0a/public_html/EE103/Adder/Domino_SPG/layout/layout.oa.cdslck
+TimeEditLocked                 Tue Dec  3 14:43:51 2013 EST
