@@ -1,0 +1,38 @@
+// Verilog HDL and netlist files of
+// "Adder Domino_SPG functional"
+
+// HDL models
+
+// HDL file - NCSU_Digital_Parts, xor3, functional.
+/usr/cots/cadence/6.x/local/ncsu-cdk-1.6.0.beta/lib/NCSU_Digital_Parts/xor3/functional/verilog.v
+
+// HDL file - NCSU_Digital_Parts, nand2, functional.
+/usr/cots/cadence/6.x/local/ncsu-cdk-1.6.0.beta/lib/NCSU_Digital_Parts/nand2/functional/verilog.v
+
+// HDL file - NCSU_Digital_Parts, nand3, functional.
+/usr/cots/cadence/6.x/local/ncsu-cdk-1.6.0.beta/lib/NCSU_Digital_Parts/nand3/functional/verilog.v
+
+// HDL file - NCSU_Digital_Parts, inv, functional.
+/usr/cots/cadence/6.x/local/ncsu-cdk-1.6.0.beta/lib/NCSU_Digital_Parts/inv/functional/verilog.v
+
+// HDL file - NCSU_Digital_Parts, nor2, functional.
+/usr/cots/cadence/6.x/local/ncsu-cdk-1.6.0.beta/lib/NCSU_Digital_Parts/nor2/functional/verilog.v
+
+// HDL file for Adder, Domino_SPG, functional.
+/h/ndavis01/final_project/vlsi_final_project/Adder/Domino_SPG/functional/verilog.v
+
+
+
+// End HDL models
+
+// Netlisted models
+
+// netlist file - NCSU_Digital_Parts, and3, schematic.
+ihnl/cds0/netlist
+// netlist file - NCSU_Digital_Parts, and2, schematic.
+ihnl/cds1/netlist
+// netlist file - Adder, Domino_SPG, functional.
+ihnl/cds2/netlist
+
+
+// End HDL models
