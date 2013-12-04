@@ -16,21 +16,16 @@
               data-toggle="collapse"
             data-target="#bs-example-navbar-collapse-1"><span
           class="sr-only">Toggle navigation</span></button> <a
-      class="navbar-brand" href="#">EE103 Final Project</a>
+      class="navbar-brand" href="/">EE103 Final Project</a>
         </div><!-- Collect the nav links, forms, and other content for toggling -->
 
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav">
-              <li class="dropdown">
-                <a href="#" class="dropdown-toggle"
-                  data-toggle="dropdown">Sections <b class="caret"></b></a>
-                <ul class="dropdown-menu">
-                <li><a href="#">Action</a></li>
-                <li><a href="#">Another action</a></li>
-                <li><a href="#">Something else here</a></li>
-                <li><a href="#">Separated link</a></li>
-                <li><a href="#">One more separated link</a></li>
-                </ul>
+              <li class="active">
+                <a href="#">Report</a>
+              </li>
+              <li>
+                <a href="completion_table.html">Table of Completion</a>
               </li>
             </ul>
         </div><!-- /.navbar-collapse -->
@@ -122,6 +117,8 @@
         simulation. As you can see, the module behaves as expected, and therefore we can move on to the next
         module.
         </p>
+        <img src="assets/imgs/schem/onescomp.png" alt="1's Compliment
+        Schematic" class="img-responsive">
         <h3>Full Adder Module Analysis</h3>
         <p>
         A traditional full adder takes in 3 bits (input A, input B, and carry-in) and outputs 2 bits 
@@ -129,15 +126,18 @@
         we must change the output of our full adder appropriately. Our full adder takes in 3 bits 
         (input A, input B, and carry-in), but it outputs 3 bits. These 3 bits are the sum, propagation bit,
         and generation bit. These two bits are determined by the following boolean algebra:
-        </p><br>
+        </p>
+        <br>
         <p>
         The propagation and generation bits will be used later as inputs to the carry lookahead unit module.
-        This module must be tested in the same way as the 1’s compliment module, however, because it is only
+        This module must be tested in the same way as the 1's compliment module, however, because it is only
         a 1-bit module, the test cases are much more limited. We will be using 8 of these modules in total,
         but as long as we can verify the design of the single 1 bit adder, we know that all of them will work.
         In figure 2, you can see the output waveform of the Verilog XL simulation. As you can see, the module
         behaves as expected, and therefore we can move on to the carry lookahead unit.
         </p>
+        <img src="assets/imgs/schem/spg_final.png" alt="1's Compliment
+        Schematic" class="img-responsive">
         <h3>Carry Lookahead Unit Analysis</h3>
         <p>
         This module will compute 4 carry bits in parallel, which will significantly speed up our adder
@@ -151,13 +151,18 @@
         used AND/OR/inverter logic, but it will be easier to optimize on the transistor level, and can still 
         possibly be smaller in size.
         </p>
+        <img src="assets/imgs/schem/clu_final.png" alt="1's Compliment
+        Schematic" class="img-responsive">
         <h3>8-bit 2's Compliment Adder Analysis</h3>
         <p>
         The final product after connecting all of our modules is a 8-bit 2's compliment carry lookahead adder.
         This adder is made up of a single 1's compliment module, 8 full adders, and 2 4-bit carry lookahead
         units. In order to verify that this adder works as expected, we implement 4 specific input cases
         given by the lab in order to verify that the module works. These conditions are given as
-        </p><br>
+        </p>
+        <img src="assets/imgs/schem/domino_8adder.png" alt="1's Compliment
+        Schematic" class="img-responsive">
+        <br>
         <p>
         We input the different cases into our stimulus file for this simulation, and run it using VERILOG XL.
         As shown in figure 4 the output of our adder was correct for every case. It successfully performed 
@@ -172,8 +177,6 @@
         As shown in our analysis, this lab was a success. Every module worked as expected, as did the final
         adder.
         </p>
-        <a href="http://www.eecs.tufts.edu/~nkurin0a/EE103/Noah_Lab3.pdf">Lab 3</a><br>
-        <a href="http://www.eecs.tufts.edu/~nkurin0a/EE103/Adder_Initial_Design.pdf">Initial Adder Design and Simulation</a><br>
         </div>
         <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
         <script src="https://code.jquery.com/jquery.js"></script>
