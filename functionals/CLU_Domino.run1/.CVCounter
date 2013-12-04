@@ -1,0 +1,11 @@
+cellViewCounterTable = makeTable('cellViewCounterTableType nil)
+cellViewCounterTable['("NCSU_Digital_Parts" "and2" "symbol" )] =  42
+cellViewCounterTable['("NCSU_Digital_Parts" "or2" "symbol" )] =  43
+cellViewCounterTable['("Adder" "CLU_Domino" "functional" )] =  524
+cellViewCounterTable['("NCSU_Digital_Parts" "nand2" "symbol" )] =  43
+cellViewCounterTable['("NCSU_Digital_Parts" "and2" "schematic" )] =  55
+cellViewCounterTable['("NCSU_Digital_Parts" "inv" "symbol" )] =  34
+cellViewCounterTable['("NCSU_Digital_Parts" "nor2" "symbol" )] =  44
+cellViewCounterTable['("basic" "opin" "symbol" )] =  19
+cellViewCounterTable['("basic" "ipin" "symbol" )] =  19
+cellViewCounterTable['("NCSU_Digital_Parts" "or2" "schematic" )] =  51

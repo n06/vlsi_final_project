@@ -1,0 +1,15 @@
+
+`timescale 1ns / 1ns
+
+module test;
+
+
+wire  C0_, C1, C1_, C2, C2_, C3, C3_, C4;
+
+reg  C0, G0, G1, G2, G3, P0, P1, P2, P3, PHI;
+
+
+
+CLU_Domino top(C0_, C1, C1_, C2, C2_, C3, C3_, C4, C0, G0, G1, G2, G3, 
+     P0, P1, P2, P3, PHI); 
+ 

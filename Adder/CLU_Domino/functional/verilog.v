@@ -36,19 +36,19 @@ P0, P1, P2, P3, PHI );
 
   not #1 inv0(C0_, C0);
   
-  and aa0(nn1,P0,C0);
-  and aa1(nn2, P1,C1_io);
-  and aa2(nn3, P2,C2_io);
-  and aa3(nn4, P3,C3_io);
-  or o0(C1_io,G0, nn1);
-  or o1(C2_io,G1, nn2);
-  or o2(C3_io,G2, nn3);
-  or o3(C4_io,G3, nn4);
+  and #(1.333) aa0(nn1,P0,C0);
+  and #(1.333) aa1(nn2, P1,C1_io);
+  and #(1.333) aa2(nn3, P2,C2_io);
+  and #(1.333) aa3(nn4, P3,C3_io);
+  or #(1.666) o0(C1_io,G0, nn1);
+  or #(1.666) o1(C2_io,G1, nn2);
+  or #(1.666) o2(C3_io,G2, nn3);
+  or #(1.666) o3(C4_io,G3, nn4);
 
-  and #(4,2) a0(C1_, C1_io, PHI);
-  and #(4,2) a1(C2_, C2_io, PHI);
-  and #(4,2) a2(C3_, C3_io, PHI);
-  and #(4,2) a3(C4_, C4_io, PHI);
+  nand #(2.666,1.333) a0(C1_, C1_io, PHI);
+  nand #(2.666,1.333) a1(C2_, C2_io, PHI);
+  nand #(2.666,1.333) a2(C3_, C3_io, PHI);
+  nand #(2.666,1.333) a3(C4_, C4_io, PHI);
   not #(0.833,1.666) n0(C1,C1_);
   not #(0.833,1.666) n1(C2,C2_);
   not #(0.833,1.666) n2(C3,C3_);

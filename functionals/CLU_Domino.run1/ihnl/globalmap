@@ -1,0 +1,10 @@
+CADENCE IHNL01070
+$model
+Adder/CLU_Domino/functional CLU_Domino
+NCSU_Digital_Parts/or2/schematic or2
+NCSU_Digital_Parts/and2/schematic and2
+$endmodel
+$net
+$endnet
+$param
+$endparam

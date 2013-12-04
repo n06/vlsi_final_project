@@ -40,10 +40,10 @@ P0, P1, P2, P3, PHI );
   and aa1(nn2, P1,C1_io);
   and aa2(nn3, P2,C2_io);
   and aa3(nn4, P3,C3_io);
-  or o0(C1_io,G0, n1);
-  or o1(C2_io,G1, n2);
-  or o2(C3_io,G2, n3);
-  or o3(C4_io,G3, n4);
+  or o0(C1_io,G0, nn1);
+  or o1(C2_io,G1, nn2);
+  or o2(C3_io,G2, nn3);
+  or o3(C4_io,G3, nn4);
 
   and #(4,2) a0(C1_, C1_io, PHI);
   and #(4,2) a1(C2_, C2_io, PHI);
