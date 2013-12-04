@@ -1,0 +1,10 @@
+simVerilogNetlistFileList = '((("Adder" "HI_Inverter") 
+	("cds0/netlist" "cds0/map" "functional")
+    )
+)
+simVerilogNetlistFileLibList = '("Adder")
+simVerilogNetlistFileCellList = '(("Adder" 
+	("HI_Inverter")
+    )
+)
+hnlIncrementalDirectory = '"ihnl"

@@ -11,8 +11,7 @@ module Latch ( Q, Clk, D );
   wire L,R,QR;
   wire Clk_;
 
-  not #1 n0(Clk_,Clk);  
-  
+  not #1 n0(Clk_,Clk);    
   not #1 n1(QR,Q_);
   and #2 a0(L,D,Clk);
   and #2 a1(R,QR,Clk_);

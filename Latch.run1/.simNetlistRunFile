@@ -1,0 +1,17 @@
+simVerilogNetlistFileList = '((("Adder" "Latch") 
+	("cds1/netlist" "cds1/map" "functional")
+    ) 
+    (("NCSU_Digital_Parts" "and2") 
+	("cds0/netlist" "cds0/map" "schematic")
+    )
+)
+simVerilogNetlistFileLibList = '("Adder" "NCSU_Digital_Parts")
+simVerilogNetlistFileCellList = '(
+    ("NCSU_Digital_Parts" 
+	("and2")
+    ) 
+    ("Adder" 
+	("Latch")
+    )
+)
+hnlIncrementalDirectory = '"ihnl"

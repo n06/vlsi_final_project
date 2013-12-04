@@ -1,0 +1,31 @@
+ 
+ Running netlist
+ Begin Incremental Netlisting Dec  3 22:30:42 2013
+ INFO (VLOGNET-60): The stimulus name mapped table will not be printed in the 
+ "testfixture.verilog" file. To print the stimulus name mapped table, set 
+ simVerilogPrintStimulusNameMappingTable = t either in CIW or the .simrc file 
+ before invoking Verilog netlister.
+  
+ INFO (VLOGNET-62): Database internal net names will be printed for floating instance ports. To prevent 
+ them from being printed, set simVerilogProcessNullPorts = t either in CIW or 
+ the .simrc file.
+  
+ INFO (VLOGNET-64): All cellviews in the design will be printed in the Netlist Configuration list. 
+ If you want to print only those cellviews that need to be re-netlisted in the 
+ list, set simVerilogIncrementalNetlistConfigList = t either in CIW or the 
+ .simrc file.
+  
+ INFO (VLOGNET-66): Module ports will be printed without the port ranges. If you have split busses 
+ across module ports you may get an incorrect netlist. To print module ports 
+ with the port ranges, set simVerilogDropPortRange = nil either in CIW or the 
+ .simrc file.
+  
+ INFO (VLOGNET-68): The initial state of stimulus of all inout pins is set to "z". To get inout 
+ pins with initial state of "0", set hnlVerilogIOInitStimulusStr = "0" 
+ either in CIW or the .simrc file.
+  
+ INFO (VLOGNET-120): Using connection by order (implicit connections) for all the stopping cells.
+ 
+ INFO (VLOGNET-80): The library 'Adder', cell 'LO_Inverter', and view 'functional' has been netlisted successfully.
+ 
+ End netlisting Dec  3 22:30:42 2013

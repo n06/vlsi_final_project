@@ -1,0 +1,33 @@
+
+`timescale 1ns / 1ns
+
+module test;
+
+
+wire  Q;
+
+reg  Clk, D;
+
+
+
+Latch top(Q, Clk, D); 
+ 
+
+`ifdef verilog
+
+ //please enter any additional verilog stimulus in the testfixture.verilog file
+  `include "testfixture.verilog"
+`endif
+
+`ifdef veritime
+
+ // please enter any veritime stimulus in the testfixture.veritime file
+  `include "testfixture.veritime"
+`endif
+
+`ifdef verifault
+ // please enter any verifault stimulus in the testfixture.verifault file
+  `include "testfixture.verifault"
+`endif
+
+endmodule 

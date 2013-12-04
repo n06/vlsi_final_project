@@ -1,0 +1,33 @@
+( ( nil
+  version "2.1"
+  mapType "incremental"
+  blockName "Inverter"
+  repList "behavioral functional schematic symbol"
+  stopList "behavioral functional symbol"
+  hierDelim "."
+  hierPrefix "test.top"
+  globalHierPrefix "cds_globals."
+  netlistDir "/h/nkurin0a/Inverter.run1"
+  busRef   "ORDERED"
+  netType   "BUS"
+  leftStr  "["
+  rangeStr  ":"
+  rightStr  "]"
+ )
+( instViewTable
+ )
+( defbus
+ )
+( net
+ )
+( inst
+ )
+( model
+( "Adder/Inverter/functional" "Inverter" )
+ )
+( term
+ )
+( param
+ )
+( "Inverter" "ihnl/cds0/map" )
+ )

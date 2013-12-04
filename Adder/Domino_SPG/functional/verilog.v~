@@ -34,6 +34,6 @@ module Domino_SPG ( G, P, A, B, CLK, Sub );
   and a3(node3,Sub_,A,B);
   nor no1(node4,node2,node3);  
   and #(2.666,1.333) a4(node5,node4,CLK);
-  not #(0.833,1.666) n3(G,node5);
+  not #(0.833,1.666) n4(G,node5);
 
 endmodule

@@ -1,0 +1,9 @@
+CADENCE IHNL01070
+$model
+NCSU_Digital_Parts/and2/schematic and2
+Adder/Latch/functional Latch
+$endmodel
+$net
+$endnet
+$param
+$endparam
