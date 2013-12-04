@@ -1,0 +1,19 @@
+// Verilog HDL and netlist files of
+// "Adder LO_Inverter functional"
+
+// HDL models
+
+// HDL file for Adder, LO_Inverter, functional.
+/h/nkurin0a/public_html/EE103/Adder/LO_Inverter/functional/verilog.v
+
+
+
+// End HDL models
+
+// Netlisted models
+
+// netlist file - Adder, LO_Inverter, functional.
+ihnl/cds0/netlist
+
+
+// End HDL models

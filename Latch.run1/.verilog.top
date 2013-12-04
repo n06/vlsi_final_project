@@ -1,0 +1,14 @@
+
+`timescale 1ns / 1ns
+
+module test;
+
+
+wire  Q;
+
+reg  Clk, D;
+
+
+
+Latch top(Q, Clk, D); 
+ 

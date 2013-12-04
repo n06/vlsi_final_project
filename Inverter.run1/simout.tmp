@@ -1,0 +1,65 @@
+Host command: /usr/cots/cadence/IUS820/tools/verilog/bin/verilog.exe
+Command arguments:
+    /h/nkurin0a/Inverter.run1/testfixture.template
+    -f verilog.inpfiles
+        /h/nkurin0a/public_html/EE103/Adder/Inverter/functional/verilog.v
+        ihnl/cds0/netlist
+    -l simout.tmp
+    +tms_incl+
+    +pulse_r/100
+    +pulse_e/100
+    +delay_mode_path
+    +sxl_keep_minimum
+    -a
+    +libext+.v+
+    +incdir+hdlFilesDir
+    +sdf_verbose
+    +gui_zz+/h/nkurin0a/Inverter.run1/.simTmpCmd
+    +gui_sync
+    -s
+
+Tool:	VERILOG-XL	08.20.001-p log file created Dec  3, 2013  22:19:40
+Tool:	VERILOG-XL	08.20.001-p   Dec  3, 2013  22:19:40
+
+Copyright (c) 1995-2004 Cadence Design Systems, Inc.  All Rights Reserved.
+Unpublished -- rights reserved under the copyright laws of the United States.
+
+Copyright (c) 1995-2004 UNIX Systems Laboratories, Inc.  Reproduced with Permission.
+
+THIS SOFTWARE AND ON-LINE DOCUMENTATION CONTAIN CONFIDENTIAL INFORMATION
+AND TRADE SECRETS OF CADENCE DESIGN SYSTEMS, INC.  USE, DISCLOSURE, OR
+REPRODUCTION IS PROHIBITED WITHOUT THE PRIOR EXPRESS WRITTEN PERMISSION OF
+CADENCE DESIGN SYSTEMS, INC.
+RESTRICTED RIGHTS LEGEND
+
+Use, duplication, or disclosure by the Government is subject to
+restrictions as set forth in subparagraph (c)(1)(ii) of the Rights in
+Technical Data and Computer Software clause at DFARS 252.227-7013 or
+subparagraphs (c)(1) and (2) of Commercial Computer Software -- Restricted
+Rights at 48 CFR 52.227-19, as applicable.
+
+                Cadence Design Systems, Inc.
+                555 River Oaks Parkway
+                San Jose, California  95134
+
+For technical assistance please contact the Cadence Response Center at
+1-877-CDS-4911 or send email to support@cadence.com
+
+For more information on Cadence's Verilog-XL product line send email to
+talkv@cadence.com
+
+Compiling source file "/h/nkurin0a/Inverter.run1/testfixture.template"
+Compiling included source file "testfixture.verilog"
+Continuing compilation of source file "/h/nkurin0a/Inverter.run1/testfixture.template"
+Compiling source file "/h/nkurin0a/public_html/EE103/Adder/Inverter/functional/verilog.v"
+Compiling source file "ihnl/cds0/netlist"
+Highest level modules:
+test
+
+Type ? for help
+C1 > .
+
+L14 "testfixture.verilog": $finish at simulation time 15.00 ns
+0 simulation events (use +profile or +listcounts option to count) + 6 accelerated events
+CPU time: 0.1 secs to compile + 0.0 secs to link + 0.0 secs in simulation
+End of Tool:	VERILOG-XL	08.20.001-p   Dec  3, 2013  22:19:49

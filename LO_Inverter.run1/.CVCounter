@@ -1,0 +1,2 @@
+cellViewCounterTable = makeTable('cellViewCounterTableType nil)
+cellViewCounterTable['("Adder" "LO_Inverter" "functional" )] =  11

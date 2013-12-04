@@ -21,8 +21,8 @@ module XOR3_Domino ( Y, A, B, Clk, Sub, B_, Sub_ );
   not #1 n1(B_,B);
 
   xor x1(xor_normal, Sub, A, B);
-  not n1(xor_normal_, xor_normal);
+  not n2(xor_normal_, xor_normal);
   and #(5.333,2.666) a1(node1, xor_normal_, Clk);
-  not #(0.833,1.666) n1(Y,node1);
+  not #(0.833,1.666) n3(Y,node1);
 
 endmodule

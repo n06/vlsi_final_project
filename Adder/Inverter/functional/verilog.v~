@@ -1,9 +1,9 @@
 //Verilog HDL for "Lab3", "Inverter" "functional"
 
+`timescale 1ns/10ps
 
 module Inverter ( Vout, Vin );
 
-  'timescale 1ns/10ps
   input Vin;
   output Vout;
 

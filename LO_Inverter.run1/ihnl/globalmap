@@ -1,0 +1,8 @@
+CADENCE IHNL01070
+$model
+Adder/LO_Inverter/functional LO_Inverter
+$endmodel
+$net
+$endnet
+$param
+$endparam
