@@ -1,0 +1,37 @@
+( ( nil
+  version "2.1"
+  mapType "incremental"
+  blockName "Domino_SPG"
+  repList "behavioral functional schematic symbol"
+  stopList "behavioral functional symbol"
+  hierDelim "."
+  hierPrefix "test.top"
+  globalHierPrefix "cds_globals."
+  netlistDir "/h/nkurin0a/Domino_SPG.run1"
+  busRef   "ORDERED"
+  netType   "BUS"
+  leftStr  "["
+  rangeStr  ":"
+  rightStr  "]"
+ )
+( instViewTable
+ )
+( defbus
+ )
+( net
+ )
+( inst
+ )
+( model
+( "NCSU_Digital_Parts/and2/schematic" "and2" )
+( "Adder/Domino_SPG/functional" "Domino_SPG" )
+( "NCSU_Digital_Parts/and3/schematic" "and3" )
+ )
+( term
+ )
+( param
+ )
+( "and2" "ihnl/cds1/map" )
+( "and3" "ihnl/cds0/map" )
+( "Domino_SPG" "ihnl/cds2/map" )
+ )

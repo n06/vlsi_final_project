@@ -1,0 +1,4 @@
+cellViewCounterTable = makeTable('cellViewCounterTableType nil)
+cellViewCounterTable['("NCSU_Digital_Parts" "xor3" "symbol" )] =  52
+cellViewCounterTable['("NCSU_Digital_Parts" "nand2" "symbol" )] =  43
+cellViewCounterTable['("Adder" "XOR3_Domino" "functional" )] =  421

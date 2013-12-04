@@ -14,8 +14,7 @@ module Domino_SPG ( G, P, A, B, CLK, Sub );
   wire A_;
   wire B_;
   wire Sub_;
-  wire xor_normal;
-  wire xor_normal_;  
+  wire xor_normal;  
   wire node1;
   wire node2;
   wire node3;
@@ -26,14 +25,13 @@ module Domino_SPG ( G, P, A, B, CLK, Sub );
   not #1 n1(B_,B);
 
   xor x1(xor_normal, Sub, A, B);
-  not n2(xor_normal_, xor_normal);
-  and #(5.333,2.666) a1(node1, xor_normal_, CLK);
+  nand #(5.333,2.666) a1(node1, xor_normal, CLK);
   not #(0.833,1.666) n3(P,node1);
 
   and a2(node2,Sub,A,B_);
   and a3(node3,Sub_,A,B);
-  nor no1(node4,node2,node3);  
-  and #(2.666,1.333) a4(node5,node4,CLK);
+  or no1(node4,node2,node3);  
+  nand #(2.666,1.333) a4(node5,node4,CLK);
   not #(0.833,1.666) n4(G,node5);
 
 endmodule

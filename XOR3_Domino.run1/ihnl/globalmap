@@ -1,0 +1,9 @@
+CADENCE IHNL01070
+$model
+Adder/XOR3_Domino/functional XOR3_Domino
+NCSU_Digital_Parts/and2/schematic and2
+$endmodel
+$net
+$endnet
+$param
+$endparam
