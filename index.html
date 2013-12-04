@@ -2,11 +2,25 @@
 
 <html>
 <head>
+    <title>EE103 Final Project</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="assets/css/bootstrap.min.css" type="text/css">
     <link rel="stylesheet" href="assets/css/custom.css" type="text/css">
-
-    <title>EE103 Final Project</title>
+    <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [['$','$'], ['\\(','\\)']]
+        },
+        TeX: {
+          equationNumbers: {
+            autoNumber: "all"
+          }
+        }
+    });
+    </script>
+    <script type="text/javascript"
+    src="https://c328740.ssl.cf1.rackcdn.com/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+    </script>
 </head>
 
 <body class="background">
@@ -16,7 +30,7 @@
               data-toggle="collapse"
             data-target="#bs-example-navbar-collapse-1"><span
           class="sr-only">Toggle navigation</span></button> <a
-      class="navbar-brand" href="/">EE103 Final Project</a>
+      class="navbar-brand" href="#">EE103 Final Project</a>
         </div><!-- Collect the nav links, forms, and other content for toggling -->
 
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
@@ -47,34 +61,47 @@
         carry treatment.</p><br>
         <h2>Introduction</h2>
         <p>
-        For our final project, we have chosen to create an 8-bit adder/subtractor. For our 
-        first iteration we have implemented this with carry lookahead logic, which will keep 
-        the time delay for the adder down by computing the carry out bit of each stage in 
-        parallel. In order to test our initial implementation we have broken down the adder 
-        into modular components. The 1's complimenter component takes in a control signal, 
-        and 8 bits of input. When the control signal is high, the 8 inputs are inverted, and 
-        when the control signal is low, they are left alone. For our design, we do not 
-        actually want to 1's compliment the second 8-bit number, but instead we want to have 
-        a 2's compliment system. The reason we broke out the 1's compliment logic into a 
-        separate module is because with our full adder implementation, as long as the control 
-        signal is the same as the carry-in for the first full adder, the second 8-bit number 
-        will in effect, 2's compliment (1's compliment + 1). As mentioned, the second module 
-        is a 1-bit full adder. This adder takes in 2 input bits, 1 carry-in bit and outputs 
-        a sum bit, a propagation bit and a generation bit. The last module in our design is 
-        the carry lookahead unit. This unit takes in 4 sets of propagation and generation bits 
-        (8 bits total) as well as the first carry-out bit in the system. The carry lookahead unit
-        outputs 4 carry-out bits.</p>
-        <p>The carry look ahead logic 
-        (implemented as a Carry Look-ahead Unit, or CLU) entails removing the carry function from
-        the full adder, and computing carry bits in parallel to decrease the number of gates from 
-        input to output in the higher bits. The logic for this lookahead carry is simple for the 
-        carry of the first bit:
-        </p><br>
+        For our final project, we have chosen to create an 8-bit adder/subtractor. For our first
+        iteration we have im- plemented this with carry lookahead logic, which will keep the time
+        delay for the adder down by computing the carry out bit of each stage in parallel. In order
+        to test our initial implementation we have broken down the adder into modular components.
+        The 1s complimenter component takes in a control signal, and 8 bits of input. When the control
+        signal is high, the 8 inputs are inverted, and when the control signal is low, they are left alone.
+        </p>
         <p>
-        and has the same for for all subsequent bits; using these equations, an equation for each
-        carry can be generated in terms of only propagation, generation and the first carry input; 
-        this means each carry is no longer dependent on the previous carry and they can be computed 
-        quickly in parallel. The equations for a 4--bit CLU are seen below:
+        For our design, we do not actually want to 1s compliment the second 8-bit number, but instead
+        we want to have a 2s compliment system. The reason we broke out the 1s compliment logic into
+        a separate module is because with our full adder implementation, as long as the control signal
+        is tied to the carry-in for the first full adder and the carry logic, the second 8-bit number
+        will be in effect 2s compliment (1s compliment + 1). As mentioned, the second module is a 1-bit
+        full adder. This adder takes in 2 input bits, 1 carry-in bit and outputs a sum bit, a propagation
+        bit and a generation bit. The last module in our design is the carry lookahead unit. This unit
+        takes in 4 sets of propagation and generation bits (8 bits total) as well as the first carry-out
+        bit in the system. The carry lookahead unit outputs 4 carry-out bits.
+        </p>
+        <p>The carry look ahead logic (implemented as a Carry Look-ahead Unit, or CLU) entails removing
+        the carry function from the standard full adder, and computing carry bits in parallel to decrease
+        the number of gates from input to output in the higher bits. The logic for this lookahead carry is
+        simple for the carry in terms of the previous carry, generation, and propagation terms:
+        $$ c_{i+1} = G_{i} + P_{i} $$
+        $$ s_{i} = G_{i} \oplus P_{i} $$
+        </p>
+        <p>
+        where $P_{i}$ and $G_{i}$ are computed by the full adder instead of a carry bit according to the following equations:
+        $$ G_{i} = a_{i} \bullet b_{i} $$
+        $$ P_{i} = a_{i} \oplus b_{i} $$
+        </p>
+        <p>
+        where $a_{i}$ and $b_{i}$ represent input bits and $c_{i}$ is the carry input to the full adder. Using these equations,
+        an equation for each carry can be generated in terms of only propagation, generation and the first carry
+        input; this means each carry is no longer dependent on the previous carry and they can be computed quickly
+        in parallel. The equations for a 4-bit CLU are seen below:
+        $$\begin{eqnarray}
+        c_{1} &amp;=&amp; G_{0} + P_{0}c_{0} \tag{5a}\\
+        c_{2} &amp;=&amp; G_{1} + P_{1}G_{0} + P_{1}P_{0}c_{0} \tag{5b}\\
+        c_{3} &amp;=&amp; G_{2} + P_{2}G_{1} + P_{2}P_{1}G_{0} + P_{2}P_{1}P_{0}c_{0} \tag{5c}\\
+        c_{4} &amp;=&amp; G_{3} + P_{3}G_{2} + P_{3}P_{2}G_{1} + P_{3}P_{2}P_{1}G_{0} + P_{3}P_{2}P_{1}P_{0}c_{0} \tag{5d}
+        \end{eqnarray}$$
         </p><br>
         <p>
         Here it is easy to see how larger bit implementations become
@@ -99,7 +126,7 @@
         compliment adder. Once the full schematic is complete, verify it, and simulate it using Verilog XL.
         When simulating the full schematic, use the appropriate values in the stimulus file as given in the lab.
         </p>
-        <h3>1's Compliment Module Analysis</h3>
+        <h3>1's Compliment Module</h3>
         <p>
         Our 1's compliment implementation is very simple. Each input bit is XORed with the control bit.
         Therefore, when the control is 1, all the bits will flip, and when the control is 0 the will stay
@@ -119,7 +146,7 @@
         </p>
         <img src="assets/imgs/schem/onescomp.png" alt="1's Compliment
         Schematic" class="img-responsive">
-        <h3>Full Adder Module Analysis</h3>
+        <h3>Full Adder Module</h3>
         <p>
         A traditional full adder takes in 3 bits (input A, input B, and carry-in) and outputs 2 bits 
         (sum, and carry-out). Because we are implementing our adder using carry lookahead logic, however,
@@ -138,7 +165,7 @@
         </p>
         <img src="assets/imgs/schem/spg_final.png" alt="1's Compliment
         Schematic" class="img-responsive">
-        <h3>Carry Lookahead Unit Analysis</h3>
+        <h3>Carry Look-Ahead Unit (CLU) Module</h3>
         <p>
         This module will compute 4 carry bits in parallel, which will significantly speed up our adder
         from the traditional ripple-carry implementation. These carry bits are generated in parallel by
@@ -153,12 +180,31 @@
         </p>
         <img src="assets/imgs/schem/clu_final.png" alt="1's Compliment
         Schematic" class="img-responsive">
-        <h3>8-bit 2's Compliment Adder Analysis</h3>
+        <h3>Top Level Integration</h3>
         <p>
-        The final product after connecting all of our modules is a 8-bit 2's compliment carry lookahead adder.
-        This adder is made up of a single 1's compliment module, 8 full adders, and 2 4-bit carry lookahead
-        units. In order to verify that this adder works as expected, we implement 4 specific input cases
-        given by the lab in order to verify that the module works. These conditions are given as
+        The final product created by connecting all of our modules is the 8-bit 2s compliment carry look-ahead
+        adder. This adder is made up of a single 1s compliment module, 8 full adders, and 2 4-bit carry lookahead
+        units, as seen in the schematic in figure 10; the symbol we created for this circuit can be seen in
+        figure 8. In the schematic, the digits of B, the second argument, are fed to the one’s complement block,
+        which also takes the control line as input. This line specifies whether addition or subtraction is to be
+        done, a 0 meaning addition and a 1 meaning subtraction. Treating this input also as the carry-in, we
+        achieve 2’s complement addition, as we can treat the B argument as the one’s complement plus one when
+        subtraction is requested. The two CLU units, each four bits wide, are at the bottom, and the propagate
+        and generate signals are fed to the blocks accordingly. The full adders receive the carries from this CLU
+        unit, and the final carry of the first unit is used as the carry in to the second unit and second four bit
+        group.
+        </p>
+        <p>
+        In order to verify that this adder works as expected, we implement 4 specific input cases given by the
+        lab in order to verify that the module works, in addition to a simple initialization test case.
+        These five test conditions are given as
+        $$\begin{eqnarray}
+        00000000 + 00000000 &amp;=&amp; 0 \; 00000000 \tag{A}\\
+        01111111 + 00000001 &amp;=&amp; 0 \; 10000000 \tag{B}\\
+        10001111 + 00000000 &amp;=&amp; 1 \; 00001110 \tag{C}\\
+        00000000 - 00000000 &amp;=&amp; 1 \; 01111111 \tag{D}\\
+        01111111 - 10001111 &amp;=&amp; 0 \; 11110000 \tag{E}\\
+        \end{eqnarray}$$
         </p>
         <img src="assets/imgs/schem/domino_8adder.png" alt="1's Compliment
         Schematic" class="img-responsive">
