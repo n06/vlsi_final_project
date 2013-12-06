@@ -123,8 +123,15 @@
         <h2>Procedure</h2>
         <p>
         To design the adder, we first constructed the basic functional
-        modules of each module in our design. Then, we constructed a schematic, verified it, and created
-        a symbol view. Then , simulate the 1's compliment module, and the full adder module separately to
+        modules of each module in our design and then the system as a
+        whole. We then constructed a schematic, verified it, and created
+        a symbol view. Once this is complete, we ran spectre
+        simulations of each module to make sure that they operate the same
+        as the functional simulations. Next, we create layouts for each
+        module, verify them, extract them, and run post-extraction
+        simulations. These simulations will show us the "real world"
+        operation of our modules and system as a whole.
+        simulate the 1's compliment module, and the full adder module separately to
         make sure that they function correctly. Once all of the symbols have been completed and the schematics
         have been verified and simulated, take the symbols, and construct a schematic for the full 8-bit 2's
         compliment adder. Once the full schematic is complete, verify it, and simulate it using Verilog XL.
