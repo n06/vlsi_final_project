@@ -212,7 +212,16 @@
         <p>
         We input the different cases into our stimulus file for this simulation, and run it using VERILOG XL.
         As shown in figure 4 the output of our adder was correct for every case. It successfully performed 
-        addition and subtraction, and even was able to return 2's complemented sums (negative numbers). 
+        addition and subtraction, and even was able to return 2's complemented sums (negative numbers).
+        $$\newcommand\T{\Rule{0pt}{1em}{.3em}}
+        \begin{array}{|c|c|c|c|c|}
+        \hline Carry &amp; Y[7:0] \T &amp; Hold Time [ns] \T &amp; Setup Time [ns] \T &amp; Prop. Delay [ns] \\\hline
+        0 \T &amp; 00000000 \T &amp; 10 \T &amp; 8 \T &amp; 18 \\\hline
+        0 \T &amp; 10000000 \T &amp; 5 \T &amp; 17 \T &amp; 22 \\\hline
+        1 \T &amp; 00001110 \T &amp; 7 \T &amp; 7 \T &amp; 14 \\\hline
+        1 \T &amp; 01111111 \T &amp; 8 \T &amp; 17 \T &amp; 25 \\\hline
+        0 \T &amp; 11110000 \T &amp; 8 \T &amp; 5 \T &amp; 13 \\\hline
+        \end{array}$$
         </p><br>
         <h2>Conclusion</h2>
         <p>
