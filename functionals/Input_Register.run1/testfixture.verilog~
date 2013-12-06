@@ -1,0 +1,74 @@
+
+// Verilog stimulus file.
+// Please do not create a module in this file.
+
+
+// Default verilog stimulus. 
+
+initial
+begin 
+   Clk = 1'b0;
+   A0D = 1'b1;
+   A1D = 1'b1;
+   A2D = 1'b1;
+   A3D = 1'b1;
+   A4D = 1'b1;
+   A5D = 1'b1;
+   A6D = 1'b1;
+   A7D = 1'b1;
+   B0D = 1'b1;
+   B1D = 1'b1;
+   B2D = 1'b1;
+   B3D = 1'b1;
+   B4D = 1'b1;
+   B5D = 1'b1;
+   B6D = 1'b1;
+   B7D = 1'b1;
+   SubD = 1'b1;
+
+   #20 Clk = 1'b1;
+
+   #10 D0 = 1'b0;
+   A0D = 1'b0;
+   A1D = 1'b0;
+   A2D = 1'b0;
+   A3D = 1'b0;
+   A4D = 1'b0;
+   A5D = 1'b0;
+   A6D = 1'b0;
+   A7D = 1'b0;
+   B0D = 1'b0;
+   B1D = 1'b0;
+   B2D = 1'b0;
+   B3D = 1'b0;
+   B4D = 1'b0;
+   B5D = 1'b0;
+   B6D = 1'b0;
+   B7D = 1'b0;
+   SubD = 1'b0;
+   #10 Clk = 1'b0;
+
+   #10 D0 = 1'b1;
+   A0D = 1'b1;
+   A1D = 1'b1;
+   A2D = 1'b1;
+   A3D = 1'b1;
+   A4D = 1'b1;
+   A5D = 1'b1;
+   A6D = 1'b1;
+   A7D = 1'b1;
+   B0D = 1'b1;
+   B1D = 1'b1;
+   B2D = 1'b1;
+   B3D = 1'b1;
+   B4D = 1'b1;
+   B5D = 1'b1;
+   B6D = 1'b1;
+   B7D = 1'b1;
+   SubD = 1'b1;
+
+   #10 Clk = 1'b1;
+   #20 $finish;
+
+
+end 

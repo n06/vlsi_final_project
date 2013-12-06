@@ -1,0 +1,33 @@
+( ( nil
+  version "2.1"
+  mapType "incremental"
+  blockName "Input_Register"
+  repList "behavioral functional schematic symbol"
+  stopList "behavioral functional symbol"
+  hierDelim "."
+  hierPrefix "test.top"
+  globalHierPrefix "cds_globals."
+  netlistDir "/h/nkurin0a/Input_Register.run1"
+  busRef   "ORDERED"
+  netType   "BUS"
+  leftStr  "["
+  rangeStr  ":"
+  rightStr  "]"
+ )
+( instViewTable
+ )
+( defbus
+ )
+( net
+ )
+( inst
+ )
+( model
+( "Adder/Input_Register/schematic" "Input_Register" )
+ )
+( term
+ )
+( param
+ )
+( "Input_Register" "ihnl/cds0/map" )
+ )

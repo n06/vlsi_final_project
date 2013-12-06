@@ -1,0 +1,10 @@
+CADENCE IHNL01070
+$model
+NCSU_Digital_Parts/or2/schematic or2
+Adder/XOR_Static/functional XOR_Static
+NCSU_Digital_Parts/and2/schematic and2
+$endmodel
+$net
+$endnet
+$param
+$endparam

@@ -1,0 +1,42 @@
+// Library - Adder, Cell - Input_Register, View - schematic
+// LAST TIME SAVED: Dec  2 20:44:44 2013
+// NETLIST TIME: Dec  5 21:15:21 2013
+`timescale 1ns / 1ns 
+
+module Input_Register ( A0Q, A1Q, A2Q, A3Q, A4Q, A5Q, A6Q, A7Q, B0Q,
+     B1Q, B2Q, B3Q, B4Q, B5Q, B6Q, B7Q, SubQ, A0D, A1D, A2D, A3D, A4D,
+     A5D, A6D, A7D, B0D, B1D, B2D, B3D, B4D, B5D, B6D, B7D, Clk, SubD
+     );
+output  A0Q, A1Q, A2Q, A3Q, A4Q, A5Q, A6Q, A7Q, B0Q, B1Q, B2Q, B3Q,
+     B4Q, B5Q, B6Q, B7Q, SubQ;
+
+input  A0D, A1D, A2D, A3D, A4D, A5D, A6D, A7D, B0D, B1D, B2D, B3D, B4D,
+     B5D, B6D, B7D, Clk, SubD;
+
+
+specify 
+    specparam CDS_LIBNAME  = "Adder";
+    specparam CDS_CELLNAME = "Input_Register";
+    specparam CDS_VIEWNAME = "schematic";
+endspecify
+
+Inverter I17 ( net121, Clk);
+Latch I34 ( SubQ, net121, SubD);
+Latch I33 ( A0Q, net121, A0D);
+Latch I32 ( B0Q, net121, B0D);
+Latch I31 ( A1Q, net121, A1D);
+Latch I30 ( B1Q, net121, B1D);
+Latch I28 ( B2Q, net121, B2D);
+Latch I29 ( A2Q, net121, A2D);
+Latch I27 ( A3Q, net121, A3D);
+Latch I26 ( B3Q, net121, B3D);
+Latch I25 ( A4Q, net121, A4D);
+Latch I24 ( B4Q, net121, B4D);
+Latch I23 ( A5Q, net121, A5D);
+Latch I22 ( B5Q, net121, B5D);
+Latch I21 ( A6Q, net121, A6D);
+Latch I20 ( B6Q, net121, B6D);
+Latch I19 ( A7Q, net121, A7D);
+Latch I18 ( B7Q, net121, B7D);
+
+endmodule

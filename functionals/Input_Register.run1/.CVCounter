@@ -1,0 +1,6 @@
+cellViewCounterTable = makeTable('cellViewCounterTableType nil)
+cellViewCounterTable['("Adder" "Latch" "symbol" )] =  74
+cellViewCounterTable['("Adder" "Inverter" "symbol" )] =  60
+cellViewCounterTable['("basic" "opin" "symbol" )] =  19
+cellViewCounterTable['("basic" "ipin" "symbol" )] =  19
+cellViewCounterTable['("Adder" "Input_Register" "schematic" )] =  10808

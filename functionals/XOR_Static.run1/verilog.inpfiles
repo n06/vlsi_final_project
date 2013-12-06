@@ -1,0 +1,32 @@
+// Verilog HDL and netlist files of
+// "Adder XOR_Static functional"
+
+// HDL models
+
+// HDL file - NCSU_Digital_Parts, nand2, functional.
+/usr/cots/cadence/6.x/local/ncsu-cdk-1.6.0.beta/lib/NCSU_Digital_Parts/nand2/functional/verilog.v
+
+// HDL file - NCSU_Digital_Parts, inv, functional.
+/usr/cots/cadence/6.x/local/ncsu-cdk-1.6.0.beta/lib/NCSU_Digital_Parts/inv/functional/verilog.v
+
+// HDL file - NCSU_Digital_Parts, nor2, functional.
+/usr/cots/cadence/6.x/local/ncsu-cdk-1.6.0.beta/lib/NCSU_Digital_Parts/nor2/functional/verilog.v
+
+// HDL file for Adder, XOR_Static, functional.
+/h/nkurin0a/public_html/EE103/Adder/XOR_Static/functional/verilog.v
+
+
+
+// End HDL models
+
+// Netlisted models
+
+// netlist file - NCSU_Digital_Parts, or2, schematic.
+ihnl/cds0/netlist
+// netlist file - NCSU_Digital_Parts, and2, schematic.
+ihnl/cds1/netlist
+// netlist file - Adder, XOR_Static, functional.
+ihnl/cds2/netlist
+
+
+// End HDL models

@@ -1,0 +1,52 @@
+// Library - Adder, Cell - Adder_Domino_SPG, View - schematic
+// LAST TIME SAVED: Dec  2 11:29:52 2013
+// NETLIST TIME: Dec  5 21:15:21 2013
+`timescale 1ns / 1ns 
+
+module Adder_Domino_SPG ( Cout, S0, S1, S2, S3, S4, S5, S6, S7, A0, A1,
+     A2, A3, A4, A5, A6, A7, B0, B1, B2, B3, B4, B5, B6, B7, CLK, Sub
+     );
+
+output  Cout, S0, S1, S2, S3, S4, S5, S6, S7;
+
+input  A0, A1, A2, A3, A4, A5, A6, A7, B0, B1, B2, B3, B4, B5, B6, B7,
+     CLK, Sub;
+
+
+specify 
+    specparam CDS_LIBNAME  = "Adder";
+    specparam CDS_CELLNAME = "Adder_Domino_SPG";
+    specparam CDS_VIEWNAME = "schematic";
+endspecify
+
+Input_Register I54 ( net0122, net0124, net0126, net0128, net0214,
+     net0208, net0202, net0106, net0123, net0125, net0104, net0129,
+     net0213, net0207, net0201, net0105, net0194, A0, A1, A2, A3, A4,
+     A5, A6, A7, B0, B1, B2, B3, B4, B5, B6, B7, CLK, Sub);
+CLU_Domino I10 ( net0114, net94, net0115, net97, net090, net89,
+     net0231, net0127, net103, net92, net95, net98, net88, net93,
+     net96, net0182, net0184, CLK);
+CLU_Domino I27 ( net0133, net0144, net0134, net0143, net0211, net0142,
+     net0215, net103, net0194, net0146, net0148, net0150, net0152,
+     net0145, net0147, net0149, net0151, CLK);
+Domino_SPG I37 ( net88, net0184, net0106, net0105, CLK, net0194);
+Domino_SPG I38 ( net98, net0182, net0202, net0201, CLK, net0194);
+Domino_SPG I39 ( net95, net96, net0208, net0207, CLK, net0194);
+Domino_SPG I40 ( net92, net93, net0214, net0213, CLK, net0194);
+Domino_SPG I41 ( net0152, net0151, net0128, net0129, CLK, net0194);
+Domino_SPG I42 ( net0150, net0149, net0126, net0104, CLK, net0194);
+Domino_SPG I43 ( net0148, net0147, net0124, net0125, CLK, net0194);
+Domino_SPG I44 ( net0146, net0145, net0122, net0123, CLK, net0194);
+XOR_Static I46 ( net0197, net0184, net89, net0231);
+XOR_Static I47 ( net0196, net0182, net97, net090);
+XOR_Static I48 ( net0195, net96, net94, net0115);
+XOR_Static I49 ( net0228, net93, net103, net0114);
+XOR_Static I50 ( net0227, net0151, net0142, net0215);
+XOR_Static I51 ( net0226, net0149, net0143, net0211);
+XOR_Static I52 ( net0225, net0147, net0144, net0134);
+XOR_Static I53 ( net0224, net0145, net0194, net0133);
+Output_Register I45 ( S0, S1, S2, S3, S4, S5, S6, S7, Cout, CLK,
+     net0224, net0225, net0226, net0227, net0228, net0195, net0196,
+     net0197, net0127);
+
+endmodule

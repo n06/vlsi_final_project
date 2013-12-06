@@ -1,0 +1,13 @@
+cellViewCounterTable = makeTable('cellViewCounterTableType nil)
+cellViewCounterTable['("Adder" "Output_Register" "symbol" )] =  265
+cellViewCounterTable['("Adder" "XOR_Static" "symbol" )] =  85
+cellViewCounterTable['("Adder" "Domino_SPG" "symbol" )] =  112
+cellViewCounterTable['("Adder" "CLU_Domino" "symbol" )] =  344
+cellViewCounterTable['("Adder" "Input_Register" "symbol" )] =  473
+cellViewCounterTable['("Adder" "Adder_Domino_SPG" "schematic" )] =  125276
+cellViewCounterTable['("Adder" "Output_Register" "schematic" )] =  5102
+cellViewCounterTable['("Adder" "Latch" "symbol" )] =  74
+cellViewCounterTable['("Adder" "Inverter" "symbol" )] =  60
+cellViewCounterTable['("basic" "opin" "symbol" )] =  19
+cellViewCounterTable['("basic" "ipin" "symbol" )] =  19
+cellViewCounterTable['("Adder" "Input_Register" "schematic" )] =  10808

@@ -1,0 +1,37 @@
+( ( nil
+  version "2.1"
+  mapType "incremental"
+  blockName "XOR_Static"
+  repList "behavioral functional schematic symbol"
+  stopList "behavioral functional symbol"
+  hierDelim "."
+  hierPrefix "test.top"
+  globalHierPrefix "cds_globals."
+  netlistDir "/h/nkurin0a/XOR_Static.run1"
+  busRef   "ORDERED"
+  netType   "BUS"
+  leftStr  "["
+  rangeStr  ":"
+  rightStr  "]"
+ )
+( instViewTable
+ )
+( defbus
+ )
+( net
+ )
+( inst
+ )
+( model
+( "NCSU_Digital_Parts/or2/schematic" "or2" )
+( "NCSU_Digital_Parts/and2/schematic" "and2" )
+( "Adder/XOR_Static/functional" "XOR_Static" )
+ )
+( term
+ )
+( param
+ )
+( "XOR_Static" "ihnl/cds2/map" )
+( "and2" "ihnl/cds1/map" )
+( "or2" "ihnl/cds0/map" )
+ )

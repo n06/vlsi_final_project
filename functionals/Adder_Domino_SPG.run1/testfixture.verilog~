@@ -1,0 +1,112 @@
+
+// Verilog stimulus file.
+// Please do not create a module in this file.
+
+
+// Default verilog stimulus. 
+
+initial
+begin 
+
+
+   A7 = 1'b0;
+   A6 = 1'b0;
+   A5 = 1'b0;
+   A4 = 1'b0;
+   A3 = 1'b0;
+   A2 = 1'b0;
+   A1 = 1'b0;
+   A0 = 1'b0;
+   B7 = 1'b0;
+   B6 = 1'b0;
+   B5 = 1'b0;
+   B4 = 1'b0;
+   B3 = 1'b0;
+   B2 = 1'b0;
+   B1 = 1'b0;
+   B0 = 1'b0;
+   Sub = 1'b0;
+   CLK = 1'b1;
+
+   #50 CLK = 1'b0;
+   A7 = 1'b0;
+   A6 = 1'b1;
+   A5 = 1'b1;
+   A4 = 1'b1;
+   A3 = 1'b1;
+   A2 = 1'b1;
+   A1 = 1'b1;
+   A0 = 1'b1;
+   B7 = 1'b0;
+   B6 = 1'b0;
+   B5 = 1'b0;
+   B4 = 1'b0;
+   B3 = 1'b0;
+   B2 = 1'b0;
+   B1 = 1'b0;
+   B0 = 1'b1;
+   Sub = 1'b0;
+   #50 CLK = 1'b1;   
+
+   #50 CLK = 1'b0;
+   A7 = 1'b1;
+   A6 = 1'b0;
+   A5 = 1'b0;
+   A4 = 1'b0;
+   A3 = 1'b1;
+   A2 = 1'b1;
+   A1 = 1'b1;
+   A0 = 1'b1;
+   B7 = 1'b0;
+   B6 = 1'b1;
+   B5 = 1'b1;
+   B4 = 1'b1;
+   B3 = 1'b1;
+   B2 = 1'b1;
+   B1 = 1'b1;
+   B0 = 1'b1;
+   Sub = 1'b0;
+   #50 CLK = 1'b1;
+
+   #50 CLK = 1'b0;
+   A7 = 1'b1;
+   A6 = 1'b0;
+   A5 = 1'b0;
+   A4 = 1'b0;
+   A3 = 1'b0;
+   A2 = 1'b0;
+   A1 = 1'b0;
+   A0 = 1'b0;
+   B7 = 1'b0;
+   B6 = 1'b0;
+   B5 = 1'b0;
+   B4 = 1'b0;
+   B3 = 1'b0;
+   B2 = 1'b0;
+   B1 = 1'b0;
+   B0 = 1'b1;
+   Sub = 1'b1;
+   #50 CLK = 1'b1;
+
+   #50 CLK = 1'b0;
+   A7 = 1'b0;
+   A6 = 1'b1;
+   A5 = 1'b1;
+   A4 = 1'b1;
+   A3 = 1'b1;
+   A2 = 1'b1;
+   A1 = 1'b1;
+   A0 = 1'b1;
+   B7 = 1'b1;
+   B6 = 1'b0;
+   B5 = 1'b0;
+   B4 = 1'b0;
+   B3 = 1'b1;
+   B2 = 1'b1;
+   B1 = 1'b1;
+   B0 = 1'b1;
+   Sub = 1'b1;
+   #50 CLK = 1'b1;
+   #50 $finish;
+
+end 

@@ -1,0 +1,8 @@
+CADENCE IHNL01070
+$model
+Adder/Input_Register/schematic Input_Register
+$endmodel
+$net
+$endnet
+$param
+$endparam

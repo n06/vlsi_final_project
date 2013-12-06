@@ -1,0 +1,20 @@
+simVerilogNetlistFileList = '((("Adder" "XOR_Static") 
+	("cds2/netlist" "cds2/map" "functional")
+    ) 
+    (("NCSU_Digital_Parts" "and2") 
+	("cds1/netlist" "cds1/map" "schematic")
+    ) 
+    (("NCSU_Digital_Parts" "or2") 
+	("cds0/netlist" "cds0/map" "schematic")
+    )
+)
+simVerilogNetlistFileLibList = '("Adder" "NCSU_Digital_Parts")
+simVerilogNetlistFileCellList = '(
+    ("NCSU_Digital_Parts" 
+	("or2" "and2")
+    ) 
+    ("Adder" 
+	("XOR_Static")
+    )
+)
+hnlIncrementalDirectory = '"ihnl"

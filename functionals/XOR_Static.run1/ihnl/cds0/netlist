@@ -1,0 +1,21 @@
+// Library - NCSU_Digital_Parts, Cell - or2, View - schematic
+// LAST TIME SAVED: Jul 12 10:02:02 2007
+// NETLIST TIME: Dec  5 22:04:26 2013
+`timescale 1ns / 1ns 
+
+module or2 ( Y, A, B );
+output  Y;
+
+input  A, B;
+
+
+specify 
+    specparam CDS_LIBNAME  = "NCSU_Digital_Parts";
+    specparam CDS_CELLNAME = "or2";
+    specparam CDS_VIEWNAME = "schematic";
+endspecify
+
+nor2 I1 ( net9, A, B);
+inv I0 ( Y, net9);
+
+endmodule

@@ -1,0 +1,10 @@
+CADENCE IHNL01070
+$model
+Adder/Adder_Domino_SPG/schematic Adder_Domino_SPG
+Adder/Input_Register/schematic Input_Register
+Adder/Output_Register/schematic Output_Register
+$endmodel
+$net
+$endnet
+$param
+$endparam

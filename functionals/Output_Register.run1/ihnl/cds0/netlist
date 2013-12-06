@@ -1,0 +1,32 @@
+// Library - Adder, Cell - Output_Register, View - schematic
+// LAST TIME SAVED: Dec  2 23:03:55 2013
+// NETLIST TIME: Dec  5 21:39:10 2013
+`timescale 1ns / 1ns 
+
+module Output_Register ( Q0, Q1, Q2, Q3, Q4, Q5, Q6, Q7, Q8, Clk, D0,
+     D1, D2, D3, D4, D5, D6, D7, D8 );
+
+output  Q0, Q1, Q2, Q3, Q4, Q5, Q6, Q7, Q8;
+
+input  Clk, D0, D1, D2, D3, D4, D5, D6, D7, D8;
+
+
+specify 
+    specparam CDS_LIBNAME  = "Adder";
+    specparam CDS_CELLNAME = "Output_Register";
+    specparam CDS_VIEWNAME = "schematic";
+endspecify
+
+Latch I8 ( Q0, net66, D0);
+Latch I7 ( Q1, net66, D1);
+Latch I6 ( Q2, net66, D2);
+Latch I5 ( Q3, net66, D3);
+Latch I4 ( Q4, net66, D4);
+Latch I3 ( Q5, net66, D5);
+Latch I2 ( Q6, net66, D6);
+Latch I1 ( Q7, net66, D7);
+Latch I0 ( Q8, net66, D8);
+Inverter I10 ( net66, net67);
+Inverter I9 ( net67, Clk);
+
+endmodule
