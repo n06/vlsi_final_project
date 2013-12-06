@@ -1,0 +1,10 @@
+simVerilogNetlistFileList = '((("Adder" "Output_Register") 
+	("cds0/netlist" "cds0/map" "schematic")
+    )
+)
+simVerilogNetlistFileLibList = '("Adder")
+simVerilogNetlistFileCellList = '(("Adder" 
+	("Output_Register")
+    )
+)
+hnlIncrementalDirectory = '"ihnl"

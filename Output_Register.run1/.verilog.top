@@ -1,0 +1,15 @@
+
+`timescale 1ns / 1ns
+
+module test;
+
+
+wire  Q0, Q1, Q2, Q3, Q4, Q5, Q6, Q7, Q8;
+
+reg  Clk, D0, D1, D2, D3, D4, D5, D6, D7, D8;
+
+
+
+Output_Register top(Q0, Q1, Q2, Q3, Q4, Q5, Q6, Q7, Q8, Clk, D0, D1, D2
+     , D3, D4, D5, D6, D7, D8); 
+ 

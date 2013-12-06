@@ -1,0 +1,11 @@
+tmLCVDPLList = '((nil viewType "netlist" viewName "functional"
+    cellName "Output_Register" libName "Adder"
+    ) 
+    (nil viewType "netlist" viewName "functional"
+    cellName "Latch" libName "Adder"
+    ) 
+    (nil viewType "netlist" viewName "functional"
+    cellName "Inverter" libName "Adder"
+    )
+)
+xxxInternalGlobAliasList = '(nil)

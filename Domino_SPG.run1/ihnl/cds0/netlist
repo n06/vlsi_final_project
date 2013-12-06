@@ -1,0 +1,31 @@
+// Library - Adder, Cell - Domino_SPG, View - schematic
+// LAST TIME SAVED: Dec  2 18:04:39 2013
+// NETLIST TIME: Dec  5 19:11:11 2013
+`timescale 1ns / 1ns 
+
+module Domino_SPG ( G, P, A, B, CLK, Sub );
+
+output  G, P;
+
+input  A, B, CLK, Sub;
+
+
+specify 
+    specparam CDS_LIBNAME  = "Adder";
+    specparam CDS_CELLNAME = "Domino_SPG";
+    specparam CDS_VIEWNAME = "schematic";
+endspecify
+
+pfet M28 ( cds_globals.vdd_, net029, CLK);
+pfet M36 ( cds_globals.vdd_, net031, CLK);
+pfet M37 ( cds_globals.vdd_, net040, CLK);
+nfet M35 ( net038, net031, net039);
+nfet M33 ( net040, net046, net042);
+nfet M1 ( net046, net029, A);
+nfet M32 ( net031, net046, B);
+nfet M38 ( cds_globals.gnd_, net038, CLK);
+nfet M34 ( net038, net040, Sub);
+HI_Inverter I8 ( G, net029);
+XOR3_Domino I11 ( P, A, B, CLK, Sub, net042, net039);
+
+endmodule

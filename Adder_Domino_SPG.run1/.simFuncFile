@@ -1,0 +1,16 @@
+simFuncDPLList = '((nil libName "Adder" cellName "XOR_Static"
+    viewName "functional" filePath "/h/ndavis01/final_project/vlsi_final_project/Adder/XOR_Static/functional/verilog.v"
+    ) 
+    (nil libName "Adder" cellName "Domino_SPG"
+    viewName "functional" filePath "/h/ndavis01/final_project/vlsi_final_project/Adder/Domino_SPG/functional/verilog.v"
+    ) 
+    (nil libName "Adder" cellName "CLU_Domino"
+    viewName "functional" filePath "/h/ndavis01/final_project/vlsi_final_project/Adder/CLU_Domino/functional/verilog.v"
+    ) 
+    (nil libName "Adder" cellName "Latch"
+    viewName "functional" filePath "/h/ndavis01/final_project/vlsi_final_project/Adder/Latch/functional/verilog.v"
+    ) 
+    (nil libName "Adder" cellName "Inverter"
+    viewName "functional" filePath "/h/ndavis01/final_project/vlsi_final_project/Adder/Inverter/functional/verilog.v"
+    )
+)

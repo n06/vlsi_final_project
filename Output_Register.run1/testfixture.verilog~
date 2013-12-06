@@ -1,0 +1,55 @@
+
+// Verilog stimulus file.
+// Please do not create a module in this file.
+
+
+// Default verilog stimulus. 
+
+initial
+begin 
+
+   Clk = 1'b0;
+   D0 = 1'b0;
+   D1 = 1'b0;
+   D2 = 1'b0;
+   D3 = 1'b0;
+   D4 = 1'b0;
+   D5 = 1'b0;
+   D6 = 1'b0;
+   D7 = 1'b0;
+   D8 = 1'b0;
+   Clk = 1'b1;
+   Clk = 1'b0;
+   D0 = 1'b0;
+   D1 = 1'b1;
+   D2 = 1'b0;
+   D3 = 1'b1;
+   D4 = 1'b0;
+   D5 = 1'b1;
+   D6 = 1'b0;
+   D7 = 1'b1;
+   D8 = 1'b0;
+   Clk = 1'b1;
+   Clk = 1'b0;
+   D0 = 1'b1;
+   D1 = 1'b1;
+   D2 = 1'b1;
+   D3 = 1'b1;
+   D4 = 1'b0;
+   D5 = 1'b0;
+   D6 = 1'b0;
+   D7 = 1'b0;
+   D8 = 1'b0;
+   Clk = 1'b1;
+   Clk = 1'b0;
+   D0 = 1'b1;
+   D1 = 1'b1;
+   D2 = 1'b1;
+   D3 = 1'b1;
+   D4 = 1'b1;
+   D5 = 1'b1;
+   D6 = 1'b1;
+   D7 = 1'b1;
+   D8 = 1'b1;
+   Clk = 1'b1;
+end 

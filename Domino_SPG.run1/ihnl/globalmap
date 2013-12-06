@@ -1,0 +1,10 @@
+CADENCE IHNL01070
+$model
+Adder/Domino_SPG/schematic Domino_SPG
+$endmodel
+$net
+vdd! cds_globals.vdd_
+gnd! cds_globals.gnd_
+$endnet
+$param
+$endparam

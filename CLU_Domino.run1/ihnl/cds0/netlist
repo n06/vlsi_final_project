@@ -1,0 +1,41 @@
+// Library - Adder, Cell - CLU_Domino, View - schematic
+// LAST TIME SAVED: Dec  1 12:42:24 2013
+// NETLIST TIME: Dec  5 19:11:40 2013
+`timescale 1ns / 1ns 
+
+module CLU_Domino ( C0_, C1, C1_, C2, C2_, C3, C3_, C4, C0, G0, G1, G2,
+     G3, P0, P1, P2, P3, PHI );
+
+output  C0_, C1, C1_, C2, C2_, C3, C3_, C4;
+
+input  C0, G0, G1, G2, G3, P0, P1, P2, P3, PHI;
+
+
+specify 
+    specparam CDS_LIBNAME  = "Adder";
+    specparam CDS_CELLNAME = "CLU_Domino";
+    specparam CDS_VIEWNAME = "schematic";
+endspecify
+
+pfet M14 ( net49, cds_globals.vdd_, PHI);
+pfet M3 ( net078, cds_globals.vdd_, PHI);
+pfet M2 ( C3_, cds_globals.vdd_, PHI);
+pfet M1 ( C2_, cds_globals.vdd_, PHI);
+pfet M0 ( C1_, cds_globals.vdd_, PHI);
+nfet M13 ( net078, net28, G3);
+nfet M12 ( net28, cds_globals.gnd_, PHI);
+nfet M11 ( net078, C3_, P3);
+nfet M10 ( C3_, net28, G2);
+nfet M9 ( C3_, C2_, P2);
+nfet M8 ( C2_, net28, G1);
+nfet M7 ( C2_, C1_, P1);
+nfet M6 ( C1_, net28, G0);
+nfet M5 ( net49, net28, C0);
+nfet M4 ( C1_, net49, P0);
+HI_Inverter I7 ( C1, C1_);
+HI_Inverter I6 ( C2, C2_);
+HI_Inverter I5 ( C3, C3_);
+HI_Inverter I4 ( C4, net078);
+Inverter I8 ( C0_, C0);
+
+endmodule

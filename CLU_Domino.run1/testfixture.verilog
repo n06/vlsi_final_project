@@ -1,0 +1,21 @@
+
+// Verilog stimulus file.
+// Please do not create a module in this file.
+
+
+// Default verilog stimulus. 
+
+initial
+begin 
+
+   C0 = 1'b0;
+   G0 = 1'b0;
+   G1 = 1'b0;
+   G2 = 1'b0;
+   G3 = 1'b0;
+   P0 = 1'b0;
+   P1 = 1'b0;
+   P2 = 1'b0;
+   P3 = 1'b0;
+   PHI = 1'b0;
+end 

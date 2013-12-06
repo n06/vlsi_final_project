@@ -1,0 +1,10 @@
+simVerilogNetlistFileList = '((("Adder" "Domino_SPG") 
+	("cds0/netlist" "cds0/map" "schematic")
+    )
+)
+simVerilogNetlistFileLibList = '("Adder")
+simVerilogNetlistFileCellList = '(("Adder" 
+	("Domino_SPG")
+    )
+)
+hnlIncrementalDirectory = '"ihnl"

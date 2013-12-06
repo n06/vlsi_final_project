@@ -1,0 +1,31 @@
+// Verilog HDL and netlist files of
+// "Adder CLU_Domino schematic"
+
+// HDL models
+
+// HDL file - Adder, Inverter, functional.
+/h/ndavis01/final_project/vlsi_final_project/Adder/Inverter/functional/verilog.v
+
+// HDL file - Adder, HI_Inverter, functional.
+/h/ndavis01/final_project/vlsi_final_project/Adder/HI_Inverter/functional/verilog.v
+
+// HDL file - NCSU_Analog_Parts, nmos, functional.
+/usr/cots/cadence/6.x/local/ncsu-cdk-1.6.0.beta/lib/NCSU_Analog_Parts/nmos/functional/verilog.v
+
+// HDL file - NCSU_Analog_Parts, pmos, functional.
+/usr/cots/cadence/6.x/local/ncsu-cdk-1.6.0.beta/lib/NCSU_Analog_Parts/pmos/functional/verilog.v
+
+
+// End HDL models
+
+// Netlisted models
+
+// netlist file - Adder, CLU_Domino, schematic.
+ihnl/cds0/netlist
+
+
+// End HDL models
+
+// globals file 
+hdlFilesDir/cds_globals.v
+

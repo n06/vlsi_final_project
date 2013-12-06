@@ -1,0 +1,21 @@
+// Verilog HDL and netlist files of
+// "Adder Output_Register schematic"
+
+// HDL models
+
+// HDL file - Adder, Inverter, functional.
+/h/ndavis01/final_project/vlsi_final_project/Adder/Inverter/functional/verilog.v
+
+// HDL file - Adder, Latch, functional.
+/h/ndavis01/final_project/vlsi_final_project/Adder/Latch/functional/verilog.v
+
+
+// End HDL models
+
+// Netlisted models
+
+// netlist file - Adder, Output_Register, schematic.
+ihnl/cds0/netlist
+
+
+// End HDL models

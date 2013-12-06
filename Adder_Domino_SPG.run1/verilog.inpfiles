@@ -1,0 +1,34 @@
+// Verilog HDL and netlist files of
+// "Adder Adder_Domino_SPG schematic"
+
+// HDL models
+
+// HDL file - Adder, XOR_Static, functional.
+/h/ndavis01/final_project/vlsi_final_project/Adder/XOR_Static/functional/verilog.v
+
+// HDL file - Adder, Domino_SPG, functional.
+/h/ndavis01/final_project/vlsi_final_project/Adder/Domino_SPG/functional/verilog.v
+
+// HDL file - Adder, CLU_Domino, functional.
+/h/ndavis01/final_project/vlsi_final_project/Adder/CLU_Domino/functional/verilog.v
+
+// HDL file - Adder, Latch, functional.
+/h/ndavis01/final_project/vlsi_final_project/Adder/Latch/functional/verilog.v
+
+// HDL file - Adder, Inverter, functional.
+/h/ndavis01/final_project/vlsi_final_project/Adder/Inverter/functional/verilog.v
+
+
+// End HDL models
+
+// Netlisted models
+
+// netlist file - Adder, Input_Register, schematic.
+ihnl/cds0/netlist
+// netlist file - Adder, Output_Register, schematic.
+ihnl/cds2/netlist
+// netlist file - Adder, Adder_Domino_SPG, schematic.
+ihnl/cds1/netlist
+
+
+// End HDL models

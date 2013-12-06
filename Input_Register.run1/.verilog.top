@@ -1,0 +1,18 @@
+
+`timescale 1ns / 1ns
+
+module test;
+
+
+wire  A0Q, A1Q, A2Q, A3Q, A4Q, A5Q, A6Q, A7Q, B0Q, B1Q, B2Q, B3Q, B4Q, 
+     B5Q, B6Q, B7Q, SubQ;
+
+reg  A0D, A1D, A2D, A3D, A4D, A5D, A6D, A7D, B0D, B1D, B2D, B3D, B4D, 
+     B5D, B6D, B7D, Clk, SubD;
+
+
+
+Input_Register top(A0Q, A1Q, A2Q, A3Q, A4Q, A5Q, A6Q, A7Q, B0Q, B1Q, 
+     B2Q, B3Q, B4Q, B5Q, B6Q, B7Q, SubQ, A0D, A1D, A2D, A3D, A4D, A5D, 
+     A6D, A7D, B0D, B1D, B2D, B3D, B4D, B5D, B6D, B7D, Clk, SubD); 
+ 

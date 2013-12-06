@@ -1,0 +1,10 @@
+CADENCE IHNL01070
+$model
+Adder/CLU_Domino/schematic CLU_Domino
+$endmodel
+$net
+vdd! cds_globals.vdd_
+gnd! cds_globals.gnd_
+$endnet
+$param
+$endparam

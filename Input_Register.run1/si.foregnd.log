@@ -1,0 +1,534 @@
+*** Loading .simrc from -> /h/ndavis01/final_project/vlsi_final_project/.simrc.
+
+Running netlist
+Begin Incremental Netlisting Dec  5 19:19:44 2013
+si: simSetDef().... hnlMaxNameLength is already set to 16. Redefinition to 50 is
+ignored.
+si: simSetDef().... hnlCapability is initialized to "nil".
+si: simSetDef().... hnlBusCapability is initialized to "nil".
+INFO (VLOGNET-60): The stimulus name mapped table will not be printed in the
+
+"testfixture.verilog" file. To print the stimulus name mapped table, set
+
+simVerilogPrintStimulusNameMappingTable = t either in CIW or the .simrc file
+
+before invoking Verilog netlister.
+ 
+INFO (VLOGNET-62): Database internal net names will be printed for floating
+instance ports. To prevent 
+them from being printed, set
+simVerilogProcessNullPorts = t either in CIW or 
+the .simrc file.
+ 
+INFO (VLOGNET-64): All cellviews in the design will be printed in the Netlist
+Configuration list. 
+If you want to print only those cellviews that need to be
+re-netlisted in the 
+list, set simVerilogIncrementalNetlistConfigList = t either
+in CIW or the 
+.simrc file.
+ 
+INFO (VLOGNET-66): Module ports will be printed without the port ranges. If you
+have split busses 
+across module ports you may get an incorrect netlist. To
+print module ports 
+with the port ranges, set simVerilogDropPortRange = nil
+either in CIW or the 
+.simrc file.
+ 
+INFO (VLOGNET-68): The initial state of stimulus of all inout pins is set to
+"z". To get inout 
+pins with initial state of "0", set
+hnlVerilogIOInitStimulusStr = "0" 
+either in CIW or the .simrc file.
+ 
+INFO (VLOGNET-120): Using connection by order (implicit connections) for all the
+stopping cells.
+
+INFO (VLOGNET-169): Module port ordering for lib 'Adder', cell 'Latch', view
+'functional' will be
+ done using the user specified port order as follows:
+
+ => ("Q" "Clk" "D")
+
+INFO (VLOGNET-169): Module port ordering for lib 'Adder', cell 'Inverter', view
+'functional' will be
+ done using the user specified port order as follows:
+
+ => ("Vout" "Vin")
+
+INFO (VLOGNET-126): ---------- Beginning netlist configuration information
+----------
+
+
+                (incremental data only)
+
+CELL NAME                   VIEW NAME            NOTE             
+---------                   ---------            ----             
+
+Inverter                    functional           *Stopping View*  
+Latch                       functional           *Stopping View*  
+Input_Register              schematic                             
+
+---------- End of netlist configuration information   ----------
+INFO (VLOGNET-80): The library 'Adder', cell 'Input_Register', and view
+'schematic' has been netlisted successfully.
+
+End netlisting Dec  5 19:19:44 2013
+
+Running netlist
+Begin Incremental Netlisting Dec  5 19:22:02 2013
+si: simSetDef().... hnlMaxNameLength is already set to 16. Redefinition to 50 is
+ignored.
+si: simSetDef().... hnlCapability is initialized to "nil".
+si: simSetDef().... hnlBusCapability is initialized to "nil".
+INFO (VLOGNET-60): The stimulus name mapped table will not be printed in the
+
+"testfixture.verilog" file. To print the stimulus name mapped table, set
+
+simVerilogPrintStimulusNameMappingTable = t either in CIW or the .simrc file
+
+before invoking Verilog netlister.
+ 
+INFO (VLOGNET-62): Database internal net names will be printed for floating
+instance ports. To prevent 
+them from being printed, set
+simVerilogProcessNullPorts = t either in CIW or 
+the .simrc file.
+ 
+INFO (VLOGNET-64): All cellviews in the design will be printed in the Netlist
+Configuration list. 
+If you want to print only those cellviews that need to be
+re-netlisted in the 
+list, set simVerilogIncrementalNetlistConfigList = t either
+in CIW or the 
+.simrc file.
+ 
+INFO (VLOGNET-66): Module ports will be printed without the port ranges. If you
+have split busses 
+across module ports you may get an incorrect netlist. To
+print module ports 
+with the port ranges, set simVerilogDropPortRange = nil
+either in CIW or the 
+.simrc file.
+ 
+INFO (VLOGNET-68): The initial state of stimulus of all inout pins is set to
+"z". To get inout 
+pins with initial state of "0", set
+hnlVerilogIOInitStimulusStr = "0" 
+either in CIW or the .simrc file.
+ 
+INFO (VLOGNET-120): Using connection by order (implicit connections) for all the
+stopping cells.
+
+INFO (VLOGNET-169): Module port ordering for lib 'Adder', cell 'Latch', view
+'functional' will be
+ done using the user specified port order as follows:
+
+ => ("Q" "Clk" "D")
+
+INFO (VLOGNET-169): Module port ordering for lib 'Adder', cell 'Inverter', view
+'functional' will be
+ done using the user specified port order as follows:
+
+ => ("Vout" "Vin")
+
+INFO (VLOGNET-126): ---------- Beginning netlist configuration information
+----------
+
+
+                (incremental data only)
+
+CELL NAME                   VIEW NAME            NOTE             
+---------                   ---------            ----             
+
+Inverter                    functional           *Stopping View*  
+Latch                       functional           *Stopping View*  
+
+---------- End of netlist configuration information   ----------
+INFO (VLOGNET-80): The library 'Adder', cell 'Input_Register', and view
+'schematic' has been netlisted successfully.
+
+End netlisting Dec  5 19:22:02 2013
+VTOOLSISE: simulator is not running.
+
+Running netlist
+Begin Incremental Netlisting Dec  5 19:22:06 2013
+si: simSetDef().... hnlMaxNameLength is already set to 16. Redefinition to 50 is
+ignored.
+si: simSetDef().... hnlCapability is initialized to "nil".
+si: simSetDef().... hnlBusCapability is initialized to "nil".
+INFO (VLOGNET-60): The stimulus name mapped table will not be printed in the
+
+"testfixture.verilog" file. To print the stimulus name mapped table, set
+
+simVerilogPrintStimulusNameMappingTable = t either in CIW or the .simrc file
+
+before invoking Verilog netlister.
+ 
+INFO (VLOGNET-62): Database internal net names will be printed for floating
+instance ports. To prevent 
+them from being printed, set
+simVerilogProcessNullPorts = t either in CIW or 
+the .simrc file.
+ 
+INFO (VLOGNET-64): All cellviews in the design will be printed in the Netlist
+Configuration list. 
+If you want to print only those cellviews that need to be
+re-netlisted in the 
+list, set simVerilogIncrementalNetlistConfigList = t either
+in CIW or the 
+.simrc file.
+ 
+INFO (VLOGNET-66): Module ports will be printed without the port ranges. If you
+have split busses 
+across module ports you may get an incorrect netlist. To
+print module ports 
+with the port ranges, set simVerilogDropPortRange = nil
+either in CIW or the 
+.simrc file.
+ 
+INFO (VLOGNET-68): The initial state of stimulus of all inout pins is set to
+"z". To get inout 
+pins with initial state of "0", set
+hnlVerilogIOInitStimulusStr = "0" 
+either in CIW or the .simrc file.
+ 
+INFO (VLOGNET-120): Using connection by order (implicit connections) for all the
+stopping cells.
+
+INFO (VLOGNET-169): Module port ordering for lib 'Adder', cell 'Latch', view
+'functional' will be
+ done using the user specified port order as follows:
+
+ => ("Q" "Clk" "D")
+
+INFO (VLOGNET-169): Module port ordering for lib 'Adder', cell 'Inverter', view
+'functional' will be
+ done using the user specified port order as follows:
+
+ => ("Vout" "Vin")
+
+INFO (VLOGNET-126): ---------- Beginning netlist configuration information
+----------
+
+
+                (incremental data only)
+
+CELL NAME                   VIEW NAME            NOTE             
+---------                   ---------            ----             
+
+Inverter                    functional           *Stopping View*  
+Latch                       functional           *Stopping View*  
+
+---------- End of netlist configuration information   ----------
+INFO (VLOGNET-80): The library 'Adder', cell 'Input_Register', and view
+'schematic' has been netlisted successfully.
+
+End netlisting Dec  5 19:22:06 2013
+VTOOLSISE: simulator is not running.
+
+Running netlist
+Begin Incremental Netlisting Dec  5 19:23:17 2013
+si: simSetDef().... hnlMaxNameLength is already set to 16. Redefinition to 50 is
+ignored.
+si: simSetDef().... hnlCapability is initialized to "nil".
+si: simSetDef().... hnlBusCapability is initialized to "nil".
+INFO (VLOGNET-60): The stimulus name mapped table will not be printed in the
+
+"testfixture.verilog" file. To print the stimulus name mapped table, set
+
+simVerilogPrintStimulusNameMappingTable = t either in CIW or the .simrc file
+
+before invoking Verilog netlister.
+ 
+INFO (VLOGNET-62): Database internal net names will be printed for floating
+instance ports. To prevent 
+them from being printed, set
+simVerilogProcessNullPorts = t either in CIW or 
+the .simrc file.
+ 
+INFO (VLOGNET-64): All cellviews in the design will be printed in the Netlist
+Configuration list. 
+If you want to print only those cellviews that need to be
+re-netlisted in the 
+list, set simVerilogIncrementalNetlistConfigList = t either
+in CIW or the 
+.simrc file.
+ 
+INFO (VLOGNET-66): Module ports will be printed without the port ranges. If you
+have split busses 
+across module ports you may get an incorrect netlist. To
+print module ports 
+with the port ranges, set simVerilogDropPortRange = nil
+either in CIW or the 
+.simrc file.
+ 
+INFO (VLOGNET-68): The initial state of stimulus of all inout pins is set to
+"z". To get inout 
+pins with initial state of "0", set
+hnlVerilogIOInitStimulusStr = "0" 
+either in CIW or the .simrc file.
+ 
+INFO (VLOGNET-120): Using connection by order (implicit connections) for all the
+stopping cells.
+
+INFO (VLOGNET-169): Module port ordering for lib 'Adder', cell 'Latch', view
+'functional' will be
+ done using the user specified port order as follows:
+
+ => ("Q" "Clk" "D")
+
+INFO (VLOGNET-169): Module port ordering for lib 'Adder', cell 'Inverter', view
+'functional' will be
+ done using the user specified port order as follows:
+
+ => ("Vout" "Vin")
+
+INFO (VLOGNET-126): ---------- Beginning netlist configuration information
+----------
+
+
+                (incremental data only)
+
+CELL NAME                   VIEW NAME            NOTE             
+---------                   ---------            ----             
+
+Inverter                    functional           *Stopping View*  
+Latch                       functional           *Stopping View*  
+
+---------- End of netlist configuration information   ----------
+INFO (VLOGNET-80): The library 'Adder', cell 'Input_Register', and view
+'schematic' has been netlisted successfully.
+
+End netlisting Dec  5 19:23:18 2013
+VTOOLSISE: simulator is not running.
+
+Running netlist
+Begin Incremental Netlisting Dec  5 19:23:54 2013
+si: simSetDef().... hnlMaxNameLength is already set to 16. Redefinition to 50 is
+ignored.
+si: simSetDef().... hnlCapability is initialized to "nil".
+si: simSetDef().... hnlBusCapability is initialized to "nil".
+INFO (VLOGNET-60): The stimulus name mapped table will not be printed in the
+
+"testfixture.verilog" file. To print the stimulus name mapped table, set
+
+simVerilogPrintStimulusNameMappingTable = t either in CIW or the .simrc file
+
+before invoking Verilog netlister.
+ 
+INFO (VLOGNET-62): Database internal net names will be printed for floating
+instance ports. To prevent 
+them from being printed, set
+simVerilogProcessNullPorts = t either in CIW or 
+the .simrc file.
+ 
+INFO (VLOGNET-64): All cellviews in the design will be printed in the Netlist
+Configuration list. 
+If you want to print only those cellviews that need to be
+re-netlisted in the 
+list, set simVerilogIncrementalNetlistConfigList = t either
+in CIW or the 
+.simrc file.
+ 
+INFO (VLOGNET-66): Module ports will be printed without the port ranges. If you
+have split busses 
+across module ports you may get an incorrect netlist. To
+print module ports 
+with the port ranges, set simVerilogDropPortRange = nil
+either in CIW or the 
+.simrc file.
+ 
+INFO (VLOGNET-68): The initial state of stimulus of all inout pins is set to
+"z". To get inout 
+pins with initial state of "0", set
+hnlVerilogIOInitStimulusStr = "0" 
+either in CIW or the .simrc file.
+ 
+INFO (VLOGNET-120): Using connection by order (implicit connections) for all the
+stopping cells.
+
+INFO (VLOGNET-169): Module port ordering for lib 'Adder', cell 'Latch', view
+'functional' will be
+ done using the user specified port order as follows:
+
+ => ("Q" "Clk" "D")
+
+INFO (VLOGNET-169): Module port ordering for lib 'Adder', cell 'Inverter', view
+'functional' will be
+ done using the user specified port order as follows:
+
+ => ("Vout" "Vin")
+
+INFO (VLOGNET-126): ---------- Beginning netlist configuration information
+----------
+
+
+                (incremental data only)
+
+CELL NAME                   VIEW NAME            NOTE             
+---------                   ---------            ----             
+
+Inverter                    functional           *Stopping View*  
+Latch                       functional           *Stopping View*  
+Input_Register              schematic                             
+
+---------- End of netlist configuration information   ----------
+INFO (VLOGNET-80): The library 'Adder', cell 'Input_Register', and view
+'schematic' has been netlisted successfully.
+
+End netlisting Dec  5 19:23:54 2013
+VTOOLSISE: simulator is not running.
+
+Running netlist
+Begin Incremental Netlisting Dec  5 19:28:13 2013
+si: simSetDef().... hnlMaxNameLength is already set to 16. Redefinition to 50 is
+ignored.
+si: simSetDef().... hnlCapability is initialized to "nil".
+si: simSetDef().... hnlBusCapability is initialized to "nil".
+INFO (VLOGNET-60): The stimulus name mapped table will not be printed in the
+
+"testfixture.verilog" file. To print the stimulus name mapped table, set
+
+simVerilogPrintStimulusNameMappingTable = t either in CIW or the .simrc file
+
+before invoking Verilog netlister.
+ 
+INFO (VLOGNET-62): Database internal net names will be printed for floating
+instance ports. To prevent 
+them from being printed, set
+simVerilogProcessNullPorts = t either in CIW or 
+the .simrc file.
+ 
+INFO (VLOGNET-64): All cellviews in the design will be printed in the Netlist
+Configuration list. 
+If you want to print only those cellviews that need to be
+re-netlisted in the 
+list, set simVerilogIncrementalNetlistConfigList = t either
+in CIW or the 
+.simrc file.
+ 
+INFO (VLOGNET-66): Module ports will be printed without the port ranges. If you
+have split busses 
+across module ports you may get an incorrect netlist. To
+print module ports 
+with the port ranges, set simVerilogDropPortRange = nil
+either in CIW or the 
+.simrc file.
+ 
+INFO (VLOGNET-68): The initial state of stimulus of all inout pins is set to
+"z". To get inout 
+pins with initial state of "0", set
+hnlVerilogIOInitStimulusStr = "0" 
+either in CIW or the .simrc file.
+ 
+INFO (VLOGNET-120): Using connection by order (implicit connections) for all the
+stopping cells.
+
+INFO (VLOGNET-169): Module port ordering for lib 'Adder', cell 'Latch', view
+'functional' will be
+ done using the user specified port order as follows:
+
+ => ("Q" "Clk" "D")
+
+INFO (VLOGNET-169): Module port ordering for lib 'Adder', cell 'Inverter', view
+'functional' will be
+ done using the user specified port order as follows:
+
+ => ("Vout" "Vin")
+
+INFO (VLOGNET-126): ---------- Beginning netlist configuration information
+----------
+
+
+                (incremental data only)
+
+CELL NAME                   VIEW NAME            NOTE             
+---------                   ---------            ----             
+
+Inverter                    functional           *Stopping View*  
+Latch                       functional           *Stopping View*  
+
+---------- End of netlist configuration information   ----------
+INFO (VLOGNET-80): The library 'Adder', cell 'Input_Register', and view
+'schematic' has been netlisted successfully.
+
+End netlisting Dec  5 19:28:13 2013
+VTOOLSISE: simulator is not running.
+
+Running netlist
+Begin Incremental Netlisting Dec  5 19:28:58 2013
+si: simSetDef().... hnlMaxNameLength is already set to 16. Redefinition to 50 is
+ignored.
+si: simSetDef().... hnlCapability is initialized to "nil".
+si: simSetDef().... hnlBusCapability is initialized to "nil".
+INFO (VLOGNET-60): The stimulus name mapped table will not be printed in the
+
+"testfixture.verilog" file. To print the stimulus name mapped table, set
+
+simVerilogPrintStimulusNameMappingTable = t either in CIW or the .simrc file
+
+before invoking Verilog netlister.
+ 
+INFO (VLOGNET-62): Database internal net names will be printed for floating
+instance ports. To prevent 
+them from being printed, set
+simVerilogProcessNullPorts = t either in CIW or 
+the .simrc file.
+ 
+INFO (VLOGNET-64): All cellviews in the design will be printed in the Netlist
+Configuration list. 
+If you want to print only those cellviews that need to be
+re-netlisted in the 
+list, set simVerilogIncrementalNetlistConfigList = t either
+in CIW or the 
+.simrc file.
+ 
+INFO (VLOGNET-66): Module ports will be printed without the port ranges. If you
+have split busses 
+across module ports you may get an incorrect netlist. To
+print module ports 
+with the port ranges, set simVerilogDropPortRange = nil
+either in CIW or the 
+.simrc file.
+ 
+INFO (VLOGNET-68): The initial state of stimulus of all inout pins is set to
+"z". To get inout 
+pins with initial state of "0", set
+hnlVerilogIOInitStimulusStr = "0" 
+either in CIW or the .simrc file.
+ 
+INFO (VLOGNET-120): Using connection by order (implicit connections) for all the
+stopping cells.
+
+INFO (VLOGNET-169): Module port ordering for lib 'Adder', cell 'Latch', view
+'functional' will be
+ done using the user specified port order as follows:
+
+ => ("Q" "Clk" "D")
+
+INFO (VLOGNET-169): Module port ordering for lib 'Adder', cell 'Inverter', view
+'functional' will be
+ done using the user specified port order as follows:
+
+ => ("Vout" "Vin")
+
+INFO (VLOGNET-126): ---------- Beginning netlist configuration information
+----------
+
+
+                (incremental data only)
+
+CELL NAME                   VIEW NAME            NOTE             
+---------                   ---------            ----             
+
+Inverter                    functional           *Stopping View*  
+Latch                       functional           *Stopping View*  
+
+---------- End of netlist configuration information   ----------
+INFO (VLOGNET-80): The library 'Adder', cell 'Input_Register', and view
+'schematic' has been netlisted successfully.
+
+End netlisting Dec  5 19:28:58 2013
+VTOOLSISE: simulator is not running.

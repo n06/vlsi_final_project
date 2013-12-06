@@ -1,0 +1,7 @@
+(pinMapTop
+   mapFileList (
+      ("Adder/Input_Register/schematic" "pinMap.1")
+  )
+  topCell ("Adder/Input_Register/schematic" "pinMap.1")
+  nextFileIndex 2
+)

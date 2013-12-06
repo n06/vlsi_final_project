@@ -1,0 +1,36 @@
+( ( nil
+  version "2.1"
+  mapType "incremental"
+  blockName "Domino_SPG"
+  repList "behavioral functional schematic symbol"
+  stopList "behavioral functional symbol"
+  globalList "gnd! vdd!"
+  hierDelim "."
+  hierPrefix "test.top"
+  globalHierPrefix "cds_globals."
+  netlistDir "/h/ndavis01/final_project/vlsi_final_project/Domino_SPG.run1"
+  busRef   "ORDERED"
+  netType   "BUS"
+  leftStr  "["
+  rangeStr  ":"
+  rightStr  "]"
+ )
+( instViewTable
+ )
+( defbus
+ )
+( net
+ )
+( inst
+ )
+( model
+( "gnd!" "cds_globals.gnd_" )
+( "Adder/Domino_SPG/schematic" "Domino_SPG" )
+( "vdd!" "cds_globals.vdd_" )
+ )
+( term
+ )
+( param
+ )
+( "Domino_SPG" "ihnl/cds0/map" )
+ )

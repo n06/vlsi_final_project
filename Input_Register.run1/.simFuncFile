@@ -1,0 +1,7 @@
+simFuncDPLList = '((nil libName "Adder" cellName "Latch"
+    viewName "functional" filePath "/h/ndavis01/final_project/vlsi_final_project/Adder/Latch/functional/verilog.v"
+    ) 
+    (nil libName "Adder" cellName "Inverter"
+    viewName "functional" filePath "/h/ndavis01/final_project/vlsi_final_project/Adder/Inverter/functional/verilog.v"
+    )
+)
