@@ -61,28 +61,32 @@
         carry treatment.</p><br>
         <h2>Introduction</h2>
         <p>
-        For our final project, we have chosen to create an 8-bit adder/subtractor. For our first
-        iteration we have im- plemented this with carry lookahead logic, which will keep the time
-        delay for the adder down by computing the carry out bit of each stage in parallel. In order
-        to test our initial implementation we have broken down the adder into modular components.
-        The 1s complimenter component takes in a control signal, and 8 bits of input. When the control
-        signal is high, the 8 inputs are inverted, and when the control signal is low, they are left alone.
+        For our final project, we have chosen to create an 8-bit adder/subtractor.
+        We have implemented this with carry look-ahead logic, which will keep the time
+        delay for the adder down by computing the carry out bit of each stage in parallel.
+        In order to properly design and test this adder, we have broken the project down
+        modular components. The D Latch which will be the primary building block for our
+        input and output registers. These registers will be used to make sure that we have
+        the correct values at evaluation, and after the adder is complete. When the clock
+        goes high (pre-charge), the input register goes transparent, and the output register
+        goes opaque, and when the clock is low (evaluate) then the opposite is true.
+        This insures that the final output does not see any pre-charge noise, and that
+        the inputs will be ready and stable when evaluate begins.
         </p>
         <p>
-        For our design, we do not actually want to 1s compliment the second 8-bit number, but instead
-        we want to have a 2s compliment system. The reason we broke out the 1s compliment logic into
-        a separate module is because with our full adder implementation, as long as the control signal
-        is tied to the carry-in for the first full adder and the carry logic, the second 8-bit number
-        will be in effect 2s compliment (1s compliment + 1). As mentioned, the second module is a 1-bit
-        full adder. This adder takes in 2 input bits, 1 carry-in bit and outputs a sum bit, a propagation
-        bit and a generation bit. The last module in our design is the carry lookahead unit. This unit
-        takes in 4 sets of propagation and generation bits (8 bits total) as well as the first carry-out
-        bit in the system. The carry lookahead unit outputs 4 carry-out bits.
+        Instead of using traditional full adders for our next module, we created a
+        generation propagation module (SPG). The SPG creates generate and propagate
+        bits from Ai and Bi. As with the rest of our logic, this module was created
+        using domino logic, and therefore this function only occurs during the evaluate
+        phase of the clock.
         </p>
-        <p>The carry look ahead logic (implemented as a Carry Look-ahead Unit, or CLU) entails removing
-        the carry function from the standard full adder, and computing carry bits in parallel to decrease
-        the number of gates from input to output in the higher bits. The logic for this lookahead carry is
-        simple for the carry in terms of the previous carry, generation, and propagation terms:
+        <p>
+        The generate and propagate bits are then sent to the carry look-ahead (CLU)
+        module. The CLU in turn generates the carry bits for each SPG and for Cout.
+        The CLU computes carry bits in parallel to decrease the number of gates from
+        input to output in the higher bits. The logic for this look-ahead carry is
+        simple for the carry in terms of the previous carry, generation, and propagation
+        terms:
         $$ c_{i+1} = G_{i} + P_{i} $$
         $$ s_{i} = G_{i} \oplus P_{i} $$
         </p>
@@ -105,7 +109,8 @@
         </p><br>
         <p>
         Here it is easy to see how larger bit implementations become
-        excessively large.
+        excessively large. Our domino design, however, is quite small
+        and will be covered below.
         </p><br>
         <p>
         The final architecture represents a combination of carry-look ahead and ripple carry logic, 
@@ -113,13 +118,12 @@
         inherent to 8-bit CLUs. We construct a 4-bit CLU, and use two rippled CLUs to compute 8-bit
         carry look-ahead logic with one ripple step. This is not necessarily as fast as a single 8-bit 
         unit, but is more efficient in terms of area and power. In the following section we detail the
-        development process, and in the subsequent section we discuss our results. Finally, we briefly 
-        discuss the direction we will take in our final project.
+        development process, and in the subsequent section we discuss our results.
         </p><br>
         <h2>Procedure</h2>
         <p>
-        To design the adder, we first constructed the basic functional modules out of the primitive gates
-        designed in Part I of Lab 3. For each module, we constructed a schematic, verified it, and created
+        To design the adder, we first constructed the basic functional
+        modules of each module in our design. Then, we constructed a schematic, verified it, and created
         a symbol view. Then , simulate the 1's compliment module, and the full adder module separately to
         make sure that they function correctly. Once all of the symbols have been completed and the schematics
         have been verified and simulated, take the symbols, and construct a schematic for the full 8-bit 2's
@@ -163,7 +167,7 @@
         In figure 2, you can see the output waveform of the Verilog XL simulation. As you can see, the module
         behaves as expected, and therefore we can move on to the carry lookahead unit.
         </p>
-        <img src="assets/imgs/schem/spg_final.png" alt="1's Compliment
+        <img src="assets/imgs/schem/spg_final.png" alt="Final SPG
         Schematic" class="img-responsive">
         <h3>Carry Look-Ahead Unit (CLU) Module</h3>
         <p>
@@ -178,7 +182,7 @@
         used AND/OR/inverter logic, but it will be easier to optimize on the transistor level, and can still 
         possibly be smaller in size.
         </p>
-        <img src="assets/imgs/schem/clu_final.png" alt="1's Compliment
+        <img src="assets/imgs/schem/clu_final.png" alt="Funal CLU
         Schematic" class="img-responsive">
         <h3>Top Level Integration</h3>
         <p>
@@ -206,8 +210,8 @@
         01111111 - 10001111 &amp;=&amp; 0 \; 11110000 \tag{E}\\
         \end{eqnarray}$$
         </p>
-        <img src="assets/imgs/schem/domino_8adder.png" alt="1's Compliment
-        Schematic" class="img-responsive">
+        <img src="assets/imgs/schem/domino_8adder.png" alt="Full 8-bit
+        Adder Schematic" class="img-responsive">
         <br>
         <p>
         We input the different cases into our stimulus file for this simulation, and run it using VERILOG XL.
@@ -232,6 +236,46 @@
         As shown in our analysis, this lab was a success. Every module worked as expected, as did the final
         adder.
         </p>
+        <div class = "row">
+          <div class = "col-md-6">
+        <img src="assets/imgs/final_tests/case1_sch.png" alt="1 Final Test
+        Case 1 Schematic" class="img-responsive">
+          </div>
+          <div class = "col-md-6">
+        <img src="assets/imgs/final_tests/case1_ext.png" alt="Final Test
+        Case 1 Extracted" class="img-responsive">
+          </div>
+        </div>
+        <div class = "row">
+          <div class = "col-md-6">
+        <img src="assets/imgs/final_tests/case2_sch.png" alt="Final Test
+        Case 2 Schematic" class="img-responsive">
+          </div>
+          <div class = "col-md-6">
+        <img src="assets/imgs/final_tests/case2_ext.png" alt="Final Test
+        Case 2 Extracted" class="img-responsive">
+          </div>
+        </div>
+        <div class = "row">
+          <div class = "col-md-6">
+        <img src="assets/imgs/final_tests/case3_sch.png" alt="Final Test
+        Case 3 Schematic" class="img-responsive">
+          </div>
+          <div class = "col-md-6">
+        <img src="assets/imgs/final_tests/case3_ext.png" alt="Final Test
+        Case 3 Extracted" class="img-responsive">
+          </div>
+        </div>
+        <div class = "row">
+          <div class = "col-md-6">
+        <img src="assets/imgs/final_tests/case4_sch.png" alt="Final Test
+        Case 4 Schematic" class="img-responsive">
+          </div>
+          <div class = "col-md-6">
+        <img src="assets/imgs/final_tests/case4_ext.png" alt="Final Test
+        Case 4 Extracted" class="img-responsive">
+          </div>
+        </div>
         </div>
         <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
         <script src="https://code.jquery.com/jquery.js"></script>
